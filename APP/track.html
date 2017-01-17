@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>轨迹</title>
+  <link rel="stylesheet" href="css/common.css" charset="utf-8">
+  <link rel="stylesheet" href="css/track.css" charset="utf-8">
+  <script src="js/rem.js"></script>
+  <script src="https://cdn.bootcss.com/vue/2.1.8/vue.min.js"></script>
+</head>
+<body>
+
+  <div class="vue">
+
+    <header>
+      2016-01-23
+      <div class="prev-active">前一天</div>
+      <div class="next">后一天</div>
+      <!-- prev-active 有数据 可以点击 -->
+      <!-- prev 没数据 禁止点击 -->
+    </header>
+
+    <div class="total">
+      <div class="km">
+        <div class="title">总行驶：</div>
+        <div class="cont">23455km</div>
+      </div>
+      <div class="oil">
+        <div class="title">总油耗：</div>
+        <div class="cont">700L</div>
+      </div>
+    </div>
+
+    <div class="detail">
+      <div class="header">
+        <div class="time">17:44:02 - 17:50:03</div>
+        <div class="min">6分钟</div>
+        <div class="map">地图模式</div>
+      </div>
+      <div class="track">
+        <div class="beginning">山东省济南市历下区会站西路266号</div>
+        <div class="end">山东省济南市历下区会站西路288号</div>
+        <div class="info">
+          <div class="fl">
+            <div class="oil">油耗：108L</div>
+            <div class="average">平均：132.3L/100km</div>
+          </div>
+          <div class="fr">
+            <div class="oil">里程：106km</div>
+            <div class="average">平均：75.0km/h</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/track.js"></script>
+</body>
+</html>

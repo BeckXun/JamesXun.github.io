@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+	<title>车辆运行月度报表</title>
+  <link rel="stylesheet" href="css/common.css" charset="utf-8">
+  <link rel="stylesheet" href="css/monthForm.css" charset="utf-8">
+  <script src="js/rem.js"></script>
+  <script src="https://cdn.bootcss.com/echarts/3.3.2/echarts.min.js"></script>
+  <script src="https://cdn.bootcss.com/vue/2.1.8/vue.min.js"></script>
+</head>
+<body>
+
+  <div class="vue">
+
+    <header>
+      <div :class="form ? 'form-active' : 'form'" @click="tap('form')">报表</div>
+      <div :class="detail ? 'detail-active' : 'detail'" @click="tap('detail')">详细信息</div>
+    </header>
+
+    <div class="main-form" v-if="form">
+      <div class="carNum">
+        <div class="plate">京A 343323</div>
+        <div class="num">894733432</div>
+      </div>
+      <div class="pieBox">
+        <div class="date">
+          2016-11
+          <div class="fl"></div>
+          <div class="fr"></div>
+        </div>
+        <div class="pie"></div>
+      </div>
+      <div class="info">
+        <div class="list">
+          <div class="time">总时间：98.00h</div>
+          <div class="km">总里程：3767</div>
+        </div>
+        <div class="list">
+          <div class="time">总油耗：1422</div>
+          <div class="km">日均里程：376.37</div>
+        </div>
+        <div class="list">
+          <div class="time">平均车速：38.44</div>
+          <div class="km">途经：42个城市</div>
+        </div>
+        <div class="list">
+          <div class="time">高速：937.87Km</div>
+          <div class="km">国省：37.87Km</div>
+        </div>
+        <div class="list">
+          <div class="time">其他：343.Km</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-detail"  v-if="detail">
+      <div class="header">
+        <div class="date">日期</div>
+        <div class="run">运行</div>
+        <div class="lazy">怠速</div>
+        <div class="empty">空挡</div>
+        <div class="have">带档</div>
+        <div class="km">里程</div>
+        <div class="oilWear">油耗</div>
+      </div>
+
+      <div class="main">
+        <div class="list">
+          <div class="date">07-01</div>
+          <div class="run">13:18</div>
+          <div class="lazy">02:02</div>
+          <div class="empty">03:34</div>
+          <div class="have">01:37</div>
+          <div class="km">774.77</div>
+          <div class="oilWear">298.00</div>
+        </div>
+        <div class="list">
+          <div class="date">07-01</div>
+          <div class="run">13:18</div>
+          <div class="lazy">02:02</div>
+          <div class="empty">03:34</div>
+          <div class="have">01:37</div>
+          <div class="km">774.77</div>
+          <div class="oilWear">298.00</div>
+        </div>
+        <div class="list">
+          <div class="date">07-01</div>
+          <div class="run">13:18</div>
+          <div class="lazy">02:02</div>
+          <div class="empty">03:34</div>
+          <div class="have">01:37</div>
+          <div class="km">774.77</div>
+          <div class="oilWear">298.00</div>
+        </div>
+        <div class="list">
+          <div class="date">07-01</div>
+          <div class="run">13:18</div>
+          <div class="lazy">02:02</div>
+          <div class="empty">03:34</div>
+          <div class="have">01:37</div>
+          <div class="km">774.77</div>
+          <div class="oilWear">298.00</div>
+        </div>
+        <div class="list">
+          <div class="date">07-01</div>
+          <div class="run">13:18</div>
+          <div class="lazy">02:02</div>
+          <div class="empty">03:34</div>
+          <div class="have">01:37</div>
+          <div class="km">774.77</div>
+          <div class="oilWear">298.00</div>
+        </div>
+        <div class="list">
+          <div class="date">07-01</div>
+          <div class="run">13:18</div>
+          <div class="lazy">02:02</div>
+          <div class="empty">03:34</div>
+          <div class="have">01:37</div>
+          <div class="km">774.77</div>
+          <div class="oilWear">298.00</div>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <div class="total">合计</div>
+        <div class="run">580</div>
+        <div class="lazy">577</div>
+        <div class="empty">0</div>
+        <div class="have">0</div>
+        <div class="km">36</div>
+        <div class="oilWear">298.00</div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script> -->
+  <!-- <script src="js/common.js"></script> -->
+  <script src="js/monthForm.js"></script>
+</body>
+</html>

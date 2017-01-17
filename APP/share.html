@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+	<title>选择分享用户</title>
+  <link rel="stylesheet" href="css/common.css" charset="utf-8">
+  <script src="js/rem.js"></script>
+  <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+  <script src="https://cdn.bootcss.com/vue/2.1.8/vue.min.js"></script>
+</head>
+<body>
+
+
+  <div class="vue">
+    <input type="text" placeholder="请输入手机号" class="common-input"
+    @input="judgeStatus" v-model="inputMsg">
+    <!-- :class class绑定data -->
+    <!-- v-bind:class class绑定data -->
+    <div v-bind:class="buttonStatus ? 'common-button' : 'common-button-forbidden'"
+    @click="submit">
+      下一步
+    </div>
+  </div>
+
+
+  <script src="js/common.js"></script>
+  <script src="js/share.js"></script>
+</body>
+</html>

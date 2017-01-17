@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+	<title>编辑信息</title>
+  <link rel="stylesheet" href="css/common.css" charset="utf-8">
+  <link rel="stylesheet" href="css/editInfo.css" charset="utf-8">
+  <script src="js/rem.js"></script>
+  <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+  <script src="https://cdn.bootcss.com/vue/2.1.8/vue.min.js"></script>
+</head>
+<body>
+
+
+  <div class="vue">
+    <div class="carImg">
+      <div class="title">车辆图片</div>
+      <img :src="carImg">
+    </div>
+
+    <div class="main">
+      <a class="name" href="editCarInfo.html?type=carName">
+        <div class="title">名称</div>
+        <div class="carName">{{carName}}</div>
+      </a>
+      <a class="carNum" href="editCarInfo.html?type=carNum">
+        <div class="title">车架号</div>
+        <div class="num">{{carNum}}</div>
+      </a>
+    </div>
+  </div>
+
+
+
+  <script src="js/editInfo.js"></script>
+</body>
+</html>

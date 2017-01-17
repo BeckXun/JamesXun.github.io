@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <link rel="stylesheet" href="css/common.css" charset="utf-8">
+  <link rel="stylesheet" href="css/absData.css" charset="utf-8">
+  <script src="js/rem.js"></script>
+  <script src="https://cdn.bootcss.com/vue/2.1.8/vue.min.js"></script>
+	<title>ABS数据</title>
+</head>
+<body>
+
+  <div class="vue">
+
+    <div class="container" v-for="item in info">
+      <div class="header">{{item.type}}</div>
+      <div class="cont">
+        <div class="fl">
+          <div>设备：4460046300</div>
+          <div>电瓶电压：27.64</div>
+        </div>
+        <div class="fr">
+          <div>生产日期：20160116</div>
+          <div>点火电压：27.50</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" v-for="item in info">
+      <div class="header">{{item.type}}</div>
+      <div class="cont">
+        <div class="fl">
+          <div>设备：4460046300</div>
+          <div class="abnormal">电瓶电压：27.64</div>
+        </div>
+        <div class="fr">
+          <div>生产日期：20160116</div>
+          <div>点火电压：27.50</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" v-for="item in info">
+      <div class="header">{{item.type}}</div>
+      <div class="cont">
+        <div class="fl">
+          <div>设备：4460046300</div>
+          <div class="abnormal">电瓶电压：27.64</div>
+        </div>
+        <div class="fr">
+          <div>生产日期：20160116</div>
+          <div>点火电压：27.50</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" v-for="item in info">
+      <div class="header">{{item.type}}</div>
+      <div class="cont">
+        <div class="fl">
+          <div>设备：4460046300</div>
+          <div class="abnormal">电瓶电压：27.64</div>
+        </div>
+        <div class="fr">
+          <div>生产日期：20160116</div>
+          <div>点火电压：27.50</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/absData.js"></script>
+</body>
+</html>

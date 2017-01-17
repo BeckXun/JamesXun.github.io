@@ -1,0 +1,38 @@
+.carImg {
+  background: #fff;
+  margin-top: 0.12rem;
+  box-sizing: border-box;
+  padding: 0 0.16rem;
+  overflow: hidden; }
+  .carImg .title {
+    line-height: 0.6rem;
+    float: left;
+    font-size: 0.14rem; }
+  .carImg img {
+    width: 0.46rem;
+    height: 0.46rem;
+    border-radius: 100%;
+    float: right;
+    margin-top: 0.07rem; }
+
+.main {
+  background: #fff;
+  margin-top: 0.12rem;
+  box-sizing: border-box;
+  padding: 0 0.08rem; }
+  .main .name, .main .carNum {
+    overflow: hidden;
+    padding: 0 0.08rem;
+    background: url("../images/right.png") no-repeat right center;
+    background-size: 0.16rem; }
+    .main .name .title, .main .carNum .title {
+      line-height: 0.48rem;
+      font-size: 0.14rem;
+      float: left; }
+    .main .name .carName, .main .name .num, .main .carNum .carName, .main .carNum .num {
+      line-height: 0.48rem;
+      font-size: 0.14rem;
+      float: right;
+      margin-right: 0.22rem; }
+  .main .name {
+    border-bottom: 0.01rem solid #eee; }

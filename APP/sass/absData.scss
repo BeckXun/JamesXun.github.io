@@ -1,0 +1,28 @@
+.container{
+  background: rgb(251,251,251);
+  .header{
+    line-height: 0.48rem;
+    padding-left: 0.16rem;
+    box-sizing: border-box;
+    box-shadow: 0 0.01rem 0.01rem #eee;
+    background: #fff;
+  }
+  .cont{
+    box-sizing: border-box;
+    padding: 0.04rem 0.16rem 0.2rem;
+    overflow: hidden;
+    .fl,.fr{
+      width: 50%;
+    }
+  }
+
+  div div{
+    margin-top: 0.12rem;
+    font-size: 0.14rem;
+    color: rgb(68,68,68);
+  }
+
+  .abnormal{
+    color: rgb(35 ,190 ,105);
+  }
+}

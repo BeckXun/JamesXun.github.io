@@ -1,0 +1,59 @@
+
+.diagnose{
+  line-height: 0.44rem;
+  height: 0.44rem;
+  background: #fff url('../images/right.png') no-repeat 3.45rem 0.15rem;
+  background-size: 0.15rem;
+  display: block;
+  position: relative;
+  text-indent: 0.45rem;
+}
+.diagnose::before{
+  content: '';
+  background: url("../images/zhenduan.png") center;
+  background-size: 0.15rem;
+  width: 0.15rem;
+  height: 0.15rem;
+  position: absolute;
+  left: 0.15rem;
+  top: 0.14rem;
+}
+.abs{
+  background: #fff;
+  margin-top: 0.2rem;
+  padding: 0 0.15rem;
+  box-sizing: border-box;
+  a{
+    line-height: 0.44rem;
+    height: 0.44rem;
+    background: #fff url('../images/right.png') no-repeat 3.3rem 0.15rem;
+    background-size: 0.15rem;
+    display: block;
+    position: relative;
+    border-bottom: 0.01rem solid #eee;
+    text-indent: 0.3rem;
+  }
+  .absData::before{
+    content: '';
+    background: url("../images/shuju.png") center;
+    background-size: 0.15rem;
+    width: 0.15rem;
+    height: 0.15rem;
+    position: absolute;
+    left: 0rem;
+    top: 0.14rem;
+  }
+  .absDiagnose{
+    border: 0;
+  }
+  .absDiagnose::before{
+    content: '';
+    background: url("../images/lukuang.png") center;
+    background-size: 0.15rem;
+    width: 0.15rem;
+    height: 0.15rem;
+    position: absolute;
+    left: 0rem;
+    top: 0.14rem;
+  }
+}

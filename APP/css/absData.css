@@ -1,0 +1,20 @@
+.container {
+  background: #fbfbfb; }
+  .container .header {
+    line-height: 0.48rem;
+    padding-left: 0.16rem;
+    box-sizing: border-box;
+    box-shadow: 0 0.01rem 0.01rem #eee;
+    background: #fff; }
+  .container .cont {
+    box-sizing: border-box;
+    padding: 0.04rem 0.16rem 0.2rem;
+    overflow: hidden; }
+    .container .cont .fl, .container .cont .fr {
+      width: 50%; }
+  .container div div {
+    margin-top: 0.12rem;
+    font-size: 0.14rem;
+    color: #444444; }
+  .container .abnormal {
+    color: #23be69; }

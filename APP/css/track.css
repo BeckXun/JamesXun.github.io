@@ -1,0 +1,96 @@
+header {
+  background: #fff;
+  height: 0.44rem;
+  line-height: 0.44rem;
+  text-align: center;
+  color: #09bb07;
+  font-size: 0.14rem;
+  border-bottom: 0.01rem solid #e5e5e5;
+  box-sizing: border-box;
+  padding: 0 0.16rem; }
+  header div {
+    line-height: 0.44rem;
+    font-size: 0.12rem;
+    color: #343434; }
+  header .prev-active {
+    background: url("../images/left-light.png") no-repeat left center;
+    background-size: 0.15rem;
+    padding-left: 0.15rem;
+    color: #343434;
+    float: left; }
+  header .prev {
+    background: url("../images/left.png") no-repeat left center;
+    background-size: 0.15rem;
+    padding-left: 0.15rem;
+    color: #9b9b9b;
+    float: left; }
+  header .next-active {
+    background: url("../images/right-light.png") no-repeat right center;
+    background-size: 0.15rem;
+    padding-right: 0.15rem;
+    color: #343434;
+    float: right; }
+  header .next {
+    background: url("../images/right.png") no-repeat right center;
+    background-size: 0.15rem;
+    padding-right: 0.15rem;
+    color: #9b9b9b;
+    float: right; }
+
+.total {
+  height: 0.48rem;
+  padding: 0 0.15rem; }
+  .total .km, .total .oil {
+    display: inline-block;
+    width: 1.7rem; }
+    .total .km div, .total .oil div {
+      line-height: 0.48rem;
+      float: left;
+      font-size: 0.14rem; }
+    .total .km .cont, .total .oil .cont {
+      color: #09bb07; }
+
+.detail {
+  padding: 0 0.15rem;
+  box-sizing: border-box;
+  background: #fff; }
+  .detail .header {
+    line-height: 0.44rem;
+    height: 0.44rem;
+    border-bottom: 0.01rem solid #eee;
+    background: url("../images/right.png") no-repeat right center;
+    background-size: 0.15rem; }
+    .detail .header div {
+      float: left; }
+    .detail .header .time {
+      color: #343434; }
+    .detail .header .min {
+      margin-left: 0.12rem;
+      color: #9b9b9b; }
+    .detail .header .map {
+      float: right;
+      color: #9b9b9b;
+      padding-right: 0.15rem; }
+  .detail .track .beginning, .detail .track .end {
+    margin-top: 0.14rem;
+    line-height: 0.22rem;
+    font-size: 0.14rem;
+    text-indent: 0.28rem;
+    background: url("../images/beginning.png") no-repeat left center;
+    background-size: 0.16rem; }
+  .detail .track .end {
+    background: url("../images/end.png") no-repeat left center;
+    background-size: 0.16rem; }
+  .detail .track .info {
+    overflow: hidden;
+    margin-top: 0.04rem;
+    padding-bottom: 0.16rem; }
+    .detail .track .info .fl, .detail .track .info .fr {
+      width: 50%;
+      position: relative;
+      left: 0.28rem; }
+      .detail .track .info .fl div, .detail .track .info .fr div {
+        line-height: 0.14rem;
+        font-size: 0.12rem;
+        margin-top: 0.14rem;
+        color: #9b9b9b; }

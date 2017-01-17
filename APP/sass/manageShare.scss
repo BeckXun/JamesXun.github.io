@@ -1,0 +1,37 @@
+ul{
+  padding: 0 0.16rem;
+  background: #fff;
+  li{
+    overflow: hidden;
+    height: 0.44rem;
+    background: url('../images/right.png') no-repeat 3.3rem 0.15rem;
+    background-size: 0.15rem;
+    border-bottom: 0.01rem solid #eee;
+    .plate{
+      color: #343434;
+      font-size: 0.14rem;
+    }
+    .num{
+      color: #616161;
+      font-size: 0.12rem;
+      margin-left: 0.1rem;
+    }
+    .shareCount{
+      color: #b3b3b3;
+      font-size: 0.12rem;
+      float: right;
+      margin-right: 0.18rem;
+    }
+    div{
+      line-height: 0.44rem;
+      float: left;
+    }
+  }
+  li:last-child{
+    border: 0;
+  }
+}
+a{
+  display: block;
+  height: 100%;
+}

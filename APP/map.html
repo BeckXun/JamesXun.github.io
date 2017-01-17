@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>车辆详情</title>
+  <link rel="stylesheet" href="css/common.css" charset="utf-8">
+  <link rel="stylesheet" href="css/map.css" charset="utf-8">
+  <script src="js/rem.js"></script>
+  <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+  <script src="https://cdn.bootcss.com/vue/2.1.8/vue.min.js"></script>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=e1SG6jNcAIuqvFs4yj7BUsS7h0gY72bC"></script>
+</head>
+<body>
+
+  <div class="vue">
+
+    <div id="map"></div>
+
+    <div class="header">
+      <div class="fl">鲁LC9752</div>
+      <div class="fr">2016-07-11  02:01:33</div>
+    </div>
+
+    <a class="watcher" href="stateWatcher.html">监控</a>
+    <div class="traffic">路况</div>
+
+    <div class="main">
+      <div class="function">
+        <a href="track.html" class="track">轨迹</a>
+        <a href="monthForm.html" class="monthForm">报表</a>
+        <a href="share.html" class="share">分享</a>
+      </div>
+      <div class="location">中国传媒大学西校区3号楼</div>
+      <div class="refresh" @click="refresh">刷新</div>
+    </div>
+
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>

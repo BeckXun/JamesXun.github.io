@@ -1,0 +1,40 @@
+.container {
+  background: #fbfbfb; }
+  .container .header {
+    box-sizing: border-box;
+    padding: 0 0.16rem;
+    box-shadow: 0 0.01rem 0.01rem #eee;
+    background: #fff;
+    overflow: hidden; }
+    .container .header div {
+      height: 0.48rem;
+      line-height: 0.48rem;
+      color: #444444;
+      font-size: 0.14rem;
+      float: left; }
+    .container .header img {
+      width: 0.2rem;
+      height: 0.2rem;
+      margin-right: 0.08rem;
+      margin-top: 0.14rem;
+      float: left; }
+    .container .header .timestamp {
+      color: #aaaaaa;
+      text-align: right;
+      float: right; }
+  .container ul {
+    padding: 0 0.08rem;
+    box-sizing: border-box; }
+    .container ul li {
+      padding-top: 0.06rem;
+      padding-bottom: 0.16rem;
+      border-bottom: 0.01rem solid #eeeeee; }
+      .container ul li div {
+        margin-top: 0.1rem;
+        font-size: 0.14rem;
+        color: #444444;
+        line-height: 0.18rem;
+        box-sizing: border-box;
+        padding: 0 0.08rem; }
+    .container ul li:last-child {
+      border: 0; }

@@ -1,0 +1,111 @@
+header{
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  padding-left: 0.16rem;
+  font-size: 0;
+  background: #fff;
+  margin-bottom: 0.16rem;
+  img{
+    width: 0.6rem;
+    height: 0.6rem;
+    vertical-align: middle;
+    border-radius: 0.04rem;
+  }
+  .info{
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.2rem;
+    margin-left: 0.17rem;
+    .carName{
+      line-height: 0.2rem;
+      font-size: 0.14rem;
+      color: rgb(68, 68, 68);
+    }
+    .carNum{
+      line-height: 0.18rem;
+      font-size: 0.12rem;
+      color: #aaa;
+    }
+  }
+  .edit{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0.12rem;
+    margin-left: 0.84rem;
+    width: 0.6rem;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    text-indent: 0.26rem;
+    background: url('../images/edit.png') no-repeat 0.08rem #fff;
+    background-size: 0.16rem;
+    border: 0.01rem solid #eee;
+    border-radius: 0.04rem;
+    color: #aaa;
+  }
+}
+.tagBar{
+  background: #fff;
+  display: flex;
+  box-shadow: 0 0.02rem 0.02rem #eee;
+  div{
+    flex: 1;
+    text-align: center;
+    font-size: 0.14rem;
+    color: rgb(68 ,68 ,68);
+    line-height: 0.48rem;
+  }
+  .active{
+    color: rgb(35 ,190 ,105);
+  }
+}
+
+#infoModule{
+  background: transparent;
+  box-sizing: border-box;
+  padding: 0 0.08rem;
+  ul:last-child{
+    border: 0;
+  }
+  .container{
+    border-bottom: 0.01rem solid #eee;
+    padding-top: 0.05rem;
+    padding-bottom: 0.2rem;
+    font-size: 0;
+    .item{
+      line-height: 0.18rem;
+      margin-top: 0.12rem;
+      font-size: 0.14rem;
+      color: rgb(68 ,68 ,68);
+      padding: 0 0.08rem;
+    }
+    .itemStar{
+      display: inline-block;
+      line-height: 0.18rem;
+      font-size: 0.14rem;
+      color: rgb(68 ,68 ,68);
+      vertical-align: middle;
+      margin-top: 0.16rem;
+      padding: 0 0.08rem;
+    }
+    .star{
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 0.16rem;
+      font-size: 0;
+      img{
+        width: 0.16rem;
+        height: 0.16rem;
+        margin-right: 0.04rem;
+      }
+    }
+    // <li class="itemStar" v-for="cont in item.detil" >{{cont}}</li>
+    // <li class="star"  v-for="value in item.score">
+    //   <img src="images/starNone.png" v-if="value == 0">
+    //   <img src="images/starHarlf.png" v-if="value == 0.5">
+    //   <img src="images/starFull.png" v-if="value == 1">
+    // </li>
+  }
+}
+.common-button{
+  margin: 0 auto;
+}

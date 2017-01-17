@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+	<title>我的车辆</title>
+  <link rel="stylesheet" href="css/common.css" charset="utf-8">
+  <link rel="stylesheet" href="css/myCar.css" charset="utf-8">
+  <script src="js/rem.js"></script>
+  <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+  <script src="https://cdn.bootcss.com/vue/2.1.8/vue.min.js"></script>
+</head>
+<body>
+
+
+  <div class="vue">
+
+    <div class="common-searchBox">
+      <input type="text" name="" placeholder="车牌号/车架号">
+    </div>
+
+    <div class="main">
+
+      <div class="carInfoItem" v-for="item in info">
+        <a href="map.html">
+          <img :src="item.carImg" class="carImg fl">
+          <div class="info fr">
+            <div class="top">
+              <div class="carName">{{item.carName}}({{item.carType}})</div>
+              <div class="carStatus">{{item.status}}</div>
+            </div>
+            <div class="middle">
+              <div class="carNum">{{item.carNum}}</div>
+              <div class="milestone">{{item.distance}}</div>
+            </div>
+            <div class="bottom">
+              <div class="carProperty">{{item.ownership}}</div>
+              <div class="time">{{item.lastTime}}</div>
+            </div>
+          </div>
+        </a>
+
+        <div class="function fl">
+          <div class="up">
+            <a href="track.html">
+              <img src="images/myCar/01tu.png">
+              <span>轨迹</span>
+            </a>
+            <a href="monthForm.html">
+              <img src="images/myCar/02tu.png">
+              <span>报表</span>
+            </a>
+            <a href="oilWear.html">
+              <img src="images/myCar/03tu.png">
+              <span>油耗</span>
+            </a>
+          </div>
+          <div class="down">
+            <a :href="'diagnose.html?plate='+item.plate">
+              <img src="images/myCar/04tu.png">
+              <span>诊断</span>
+            </a>
+            <a href="analyze.html">
+              <img src="images/myCar/05tu.png">
+              <span>分析</span>
+            </a>
+            <a href="carInfo.html">
+              <img src="images/myCar/06tu.png">
+              <span>信息</span>
+            </a>
+          </div>
+        </div>
+        <div class="share fr" @click="share">
+          <img src="images/myCar/share.png">
+          <span>分享</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="js/myCar.js"></script>
+</body>
+</html>

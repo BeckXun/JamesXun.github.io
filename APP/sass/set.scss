@@ -1,0 +1,52 @@
+
+header{
+  background: #fff;
+  padding: 0.2rem 0.16rem;
+  font-size: 0;
+  img{
+    width: 0.6rem;
+    height: 0.6rem;
+    vertical-align: middle;
+    border-radius: 100%;
+  }
+  div{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0.14rem;
+    color: rgb(68,68,68);
+    margin-left: 0.16rem;
+  }
+}
+// <ul class="main">
+//   <a class="shareCar" href="share.html">分享车辆</a>
+//   <a class="ManageShareCar" href="manageShare.html">管理分享车辆</a>
+//
+// </ul>
+// <a class="addCar" href="addCar.html">添加车辆</a>
+.main{
+  background: #fff;
+  margin-top: 0.08rem;
+  padding: 0 0.12rem;
+  box-sizing: border-box;
+  a{
+    line-height: 0.48rem;
+    text-indent: 0.1rem;
+    font-size: 0.14rem;
+    color: rgb(68,68,68);
+    background: #fff;
+  }
+  .shareCar{
+    border-bottom: 0.01rem solid #eee;
+  }
+}
+.addCar{
+  line-height: 0.48rem;
+  text-indent: 0.22rem;
+  font-size: 0.14rem;
+  color: rgb(68,68,68);
+  margin-top: 0.08rem;
+  background: #fff;
+}
+.common-button{
+  margin-top: 2rem;
+}

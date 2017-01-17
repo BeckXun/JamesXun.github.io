@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>分析</title>
+  <link rel="stylesheet" href="css/common.css" charset="utf-8">
+  <link rel="stylesheet" href="css/analyze.css" charset="utf-8">
+  <script src="js/rem.js"></script>
+  <script src="https://cdn.bootcss.com/echarts/3.3.2/echarts.min.js"></script>
+  <script src="https://cdn.bootcss.com/vue/2.1.8/vue.min.js"></script>
+</head>
+<body>
+
+  <div class="vue">
+
+    <header>
+      <div :class="speed ? 'speed active' : 'speed'" @click="statusChange('speed')">车速</div>
+      <div :class="rotationSpeed ? 'rotationSpeed active' : 'rotationSpeed'" @click="statusChange('rotationSpeed')">转速</div>
+      <div :class="oilWear ? 'oilWear active' : 'oilWear'" @click="statusChange('oilWear')">油耗</div>
+      <div :class="accelerator ? 'accelerator active' : 'accelerator'" @click="statusChange('accelerator')">油门</div>
+      <div :class="shift ? 'shift active' : 'shift'" @click="statusChange('shift')">档位</div>
+    </header>
+
+    <div class="date">
+      2016.12
+      <div class="prev"></div>
+      <div class="next"></div>
+    </div>
+
+    <div class="info">
+      <div class="up">
+        <div class="km">里程：13322</div>
+        <div class="oilWear">油耗：4433</div>
+      </div>
+      <div class="down">
+        <div class="averageOilWear">平均油耗：36</div>
+      </div>
+    </div>
+
+    <div class="info">
+      <div class="up">
+        <div class="maxRotationSpeed">最大转速：1972rpm</div>
+        <div class="averageRotationSpeed">平均转速：443rpm</div>
+      </div>
+      <div class="down">
+        <div class="maxSpeed">最高车速：68km/h</div>
+        <div class="averageSpeed">平均车速：36km/h</div>
+      </div>
+    </div>
+
+    <div class="barBox">
+      <div class="timestamp">
+        <div class="beginning">2016-11-01 00:00:00</div>
+        <div class="end">2016-11-02 00:00:00</div>
+      </div>
+      <div class="bar"></div>
+    </div>
+
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/analyze.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+#map {
+  width: 100%;
+  height: 100%; }
+
+html, body, .vue {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.header, .watcher, .traffic, .main, .refresh {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8); }
+
+.header {
+  top: 0.12rem;
+  left: 0.16rem;
+  width: 3.43rem;
+  line-height: 0.48rem;
+  border-radius: 0.04rem;
+  box-sizing: border-box;
+  padding: 0 0.16rem; }
+  .header .fl {
+    color: #333;
+    font-size: 0.16rem; }
+  .header .fr {
+    color: #999999;
+    font-size: 0.14rem; }
+
+.watcher, .traffic {
+  top: 0.76rem;
+  right: 0.16rem;
+  width: 0.4rem;
+  text-align: center;
+  line-height: 0.4rem;
+  border-radius: 0.04rem;
+  font-size: 0.12rem;
+  color: #333; }
+
+.traffic {
+  top: 1.32rem; }
+
+.main {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  padding: 0 0.16rem;
+  box-sizing: border-box; }
+  .main .function {
+    overflow: hidden;
+    display: flex;
+    border-bottom: 0.01rem solid #eee; }
+    .main .function a {
+      flex: 1;
+      text-align: center;
+      line-height: 0.48rem; }
+    .main .function .track {
+      background: url("../images/myCar/01tu.png") no-repeat 0.26rem 0.16rem;
+      background-size: 0.15rem; }
+    .main .function .monthForm {
+      background: url("../images/myCar/02tu.png") no-repeat 0.26rem 0.16rem;
+      background-size: 0.15rem; }
+    .main .function .share {
+      background: url("../images/myCar/share.png") no-repeat 0.26rem 0.16rem;
+      background-size: 0.15rem; }
+  .main .location {
+    line-height: 0.48rem;
+    font-size: 0.14rem;
+    color: #333; }
+  .main .refresh {
+    right: 0.16rem;
+    top: -0.8rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    background: #22be69 url("../images/refresh.png") no-repeat 0.18rem 0.08rem;
+    background-size: 0.22rem;
+    border-radius: 100%;
+    padding-top: 0.36rem;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 0.12rem;
+    text-align: center; }

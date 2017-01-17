@@ -1,0 +1,40 @@
+header {
+  background: #fff;
+  padding: 0.2rem 0.16rem;
+  font-size: 0; }
+  header img {
+    width: 0.6rem;
+    height: 0.6rem;
+    vertical-align: middle;
+    border-radius: 100%; }
+  header div {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0.14rem;
+    color: #444444;
+    margin-left: 0.16rem; }
+
+.main {
+  background: #fff;
+  margin-top: 0.08rem;
+  padding: 0 0.12rem;
+  box-sizing: border-box; }
+  .main a {
+    line-height: 0.48rem;
+    text-indent: 0.1rem;
+    font-size: 0.14rem;
+    color: #444444;
+    background: #fff; }
+  .main .shareCar {
+    border-bottom: 0.01rem solid #eee; }
+
+.addCar {
+  line-height: 0.48rem;
+  text-indent: 0.22rem;
+  font-size: 0.14rem;
+  color: #444444;
+  margin-top: 0.08rem;
+  background: #fff; }
+
+.common-button {
+  margin-top: 2rem; }

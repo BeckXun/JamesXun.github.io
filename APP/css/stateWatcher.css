@@ -1,0 +1,20 @@
+.timestamp {
+  line-height: 0.34rem;
+  text-indent: 0.2rem;
+  font-size: 0.14rem;
+  color: #333; }
+
+.main {
+  background: #fff;
+  padding: 0 0.16rem;
+  box-sizing: border-box;
+  width: 3.56rem;
+  margin: 0 auto; }
+  .main .list {
+    line-height: 0.34rem;
+    font-size: 0.14rem;
+    color: #333;
+    overflow: hidden;
+    border-bottom: 0.01rem solid #eee; }
+  .main .list:last-child {
+    border: 0; }

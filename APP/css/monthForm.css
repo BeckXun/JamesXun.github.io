@@ -1,0 +1,151 @@
+header {
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  header div {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    color: #ababab;
+    font-size: 0.14rem;
+    line-height: 0.48rem;
+    text-align: center; }
+  header .form-active, header .detail-active {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    color: #50d288;
+    font-size: 0.14rem;
+    line-height: 0.48rem;
+    text-align: center;
+    position: relative; }
+  header .form-active::after, header .detail-active::after {
+    content: '';
+    background-color: #50d288;
+    width: 0.28rem;
+    height: 0.05rem;
+    border-radius: 0.02rem;
+    position: absolute;
+    left: 0.8rem;
+    bottom: 0; }
+
+.main-form {
+  background: #f5f5f5;
+  /*pie*/ }
+  .main-form .carNum {
+    line-height: 0.68rem;
+    padding: 0 0.16rem;
+    overflow: hidden; }
+    .main-form .carNum .plate {
+      float: left;
+      color: #4b4b4b;
+      font-size: 0.14rem; }
+    .main-form .carNum .num {
+      float: right;
+      color: #ababab;
+      font-size: 0.14rem; }
+  .main-form .pieBox {
+    background: #fff;
+    padding: 0 0.16rem; }
+    .main-form .pieBox .date {
+      text-align: center;
+      font-size: 0.14rem;
+      line-height: 0.4rem;
+      padding-top: 0.16rem; }
+      .main-form .pieBox .date div {
+        width: 0.4rem;
+        height: 0.4rem;
+        border-radius: 100%;
+        border: 0.01rem solid #eee;
+        background: url("../images/left.png") no-repeat center;
+        background-size: 0.16rem; }
+      .main-form .pieBox .date .fr {
+        background: url("../images/right.png") no-repeat center;
+        background-size: 0.16rem; }
+    .main-form .pieBox .pie {
+      height: 2.57rem; }
+  .main-form .info {
+    background: #fff;
+    margin-top: 0.08rem;
+    height: 2.42rem;
+    position: relative;
+    padding: 0 0.08rem; }
+    .main-form .info .list {
+      border-bottom: 0.01rem solid #eee;
+      line-height: 0.48rem;
+      overflow: hidden; }
+      .main-form .info .list div {
+        float: left;
+        width: 50%; }
+      .main-form .info .list .time {
+        text-indent: 0.08rem; }
+      .main-form .info .list .km {
+        text-indent: 0.16rem; }
+    .main-form .info div:last-child {
+      border: 0; }
+  .main-form .info:after {
+    content: '';
+    width: 0.01rem;
+    height: 2.15rem;
+    background: #eee;
+    position: absolute;
+    left: 50%;
+    top: 0.13rem; }
+
+/*detail*/
+.header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .header div {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 0;
+    line-height: 0.46rem;
+    font-size: 0.12rem;
+    color: #343434;
+    text-align: center; }
+    .header div div {
+      padding: 0; }
+    .header div .unit {
+      color: #999; }
+  .header .date {
+    color: #07bc00; }
+
+.main {
+  background: #fff; }
+  .main .list {
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .main .list div {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      line-height: 0.36rem;
+      font-size: 0.12rem;
+      text-align: center;
+      color: #343434; }
+    .main .list .date {
+      color: #07bc00; }
+
+.bottom {
+  border-top: 0.01rem solid #eee;
+  background: #fff;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .bottom div {
+    line-height: 0.44rem;
+    font-size: 0.12rem;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: center; }
+  .bottom .total {
+    color: #07bc00; }

@@ -1,0 +1,90 @@
+header {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  padding-left: 0.16rem;
+  font-size: 0;
+  background: #fff;
+  margin-bottom: 0.16rem; }
+  header img {
+    width: 0.6rem;
+    height: 0.6rem;
+    vertical-align: middle;
+    border-radius: 0.04rem; }
+  header .info {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.2rem;
+    margin-left: 0.17rem; }
+    header .info .carName {
+      line-height: 0.2rem;
+      font-size: 0.14rem;
+      color: #444444; }
+    header .info .carNum {
+      line-height: 0.18rem;
+      font-size: 0.12rem;
+      color: #aaa; }
+  header .edit {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0.12rem;
+    margin-left: 0.84rem;
+    width: 0.6rem;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    text-indent: 0.26rem;
+    background: url("../images/edit.png") no-repeat 0.08rem #fff;
+    background-size: 0.16rem;
+    border: 0.01rem solid #eee;
+    border-radius: 0.04rem;
+    color: #aaa; }
+
+.tagBar {
+  background: #fff;
+  display: flex;
+  box-shadow: 0 0.02rem 0.02rem #eee; }
+  .tagBar div {
+    flex: 1;
+    text-align: center;
+    font-size: 0.14rem;
+    color: #444444;
+    line-height: 0.48rem; }
+  .tagBar .active {
+    color: #23be69; }
+
+#infoModule {
+  background: transparent;
+  box-sizing: border-box;
+  padding: 0 0.08rem; }
+  #infoModule ul:last-child {
+    border: 0; }
+  #infoModule .container {
+    border-bottom: 0.01rem solid #eee;
+    padding-top: 0.05rem;
+    padding-bottom: 0.2rem;
+    font-size: 0; }
+    #infoModule .container .item {
+      line-height: 0.18rem;
+      margin-top: 0.12rem;
+      font-size: 0.14rem;
+      color: #444444;
+      padding: 0 0.08rem; }
+    #infoModule .container .itemStar {
+      display: inline-block;
+      line-height: 0.18rem;
+      font-size: 0.14rem;
+      color: #444444;
+      vertical-align: middle;
+      margin-top: 0.16rem;
+      padding: 0 0.08rem; }
+    #infoModule .container .star {
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 0.16rem;
+      font-size: 0; }
+      #infoModule .container .star img {
+        width: 0.16rem;
+        height: 0.16rem;
+        margin-right: 0.04rem; }
+
+.common-button {
+  margin: 0 auto; }

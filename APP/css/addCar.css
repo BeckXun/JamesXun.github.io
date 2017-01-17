@@ -1,0 +1,19 @@
+.scanCode {
+  margin: 0.2rem auto; }
+
+.inputBox {
+  padding: 0 0.12rem;
+  background: #fff; }
+  .inputBox li {
+    border-bottom: 0.01rem solid #eeeeee;
+    height: 0.48rem; }
+    .inputBox li input {
+      line-height: 0.48rem;
+      font-size: 0.16rem;
+      text-align: center;
+      width: 100%; }
+  .inputBox li:nth-child(4) {
+    border: 0; }
+
+.confirmAdd {
+  margin-top: 0.48rem; }

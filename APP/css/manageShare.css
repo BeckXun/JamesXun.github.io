@@ -1,0 +1,30 @@
+ul {
+  padding: 0 0.16rem;
+  background: #fff; }
+  ul li {
+    overflow: hidden;
+    height: 0.44rem;
+    background: url("../images/right.png") no-repeat 3.3rem 0.15rem;
+    background-size: 0.15rem;
+    border-bottom: 0.01rem solid #eee; }
+    ul li .plate {
+      color: #343434;
+      font-size: 0.14rem; }
+    ul li .num {
+      color: #616161;
+      font-size: 0.12rem;
+      margin-left: 0.1rem; }
+    ul li .shareCount {
+      color: #b3b3b3;
+      font-size: 0.12rem;
+      float: right;
+      margin-right: 0.18rem; }
+    ul li div {
+      line-height: 0.44rem;
+      float: left; }
+  ul li:last-child {
+    border: 0; }
+
+a {
+  display: block;
+  height: 100%; }
