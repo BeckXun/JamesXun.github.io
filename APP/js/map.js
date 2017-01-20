@@ -1,8 +1,10 @@
-"use strict";
+'use strict';
 
 var app = new Vue({
   el: '.vue',
-  data: {},
+  data: {
+    showFunction: true
+  },
   methods: {
     init: function init() {
       var option = {
@@ -15,8 +17,17 @@ var app = new Vue({
     refresh: function refresh() {
       window.location.reload();
     },
+    togger: function togger() {
+      if (this.showFunction === true) {
+        //height =》 1.26rem
+        $('.info').animate({ height: '1.26rem' });
+      } else {
+        //height =》 0
+        $('.info').animate({ height: '0' });
+      }
+      this.showFunction = !this.showFunction;
+    },
     render: function render(option) {
-
       // 百度地图API功能
       var map = new BMap.Map("map"); // 创建Map实例(id="map")
       var point = new BMap.Point(option.longitude, option.latitude);

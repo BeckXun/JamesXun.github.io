@@ -43,13 +43,13 @@ html, body, .vue {
   left: 0;
   bottom: 0;
   width: 100%;
-  background: #fff;
-  padding: 0 0.16rem;
-  box-sizing: border-box; }
+  background: #fff; }
   .main .function {
     overflow: hidden;
     display: flex;
-    border-bottom: 0.01rem solid #eee; }
+    border-bottom: 0.01rem solid #eee;
+    width: 3.43rem;
+    margin: 0 auto; }
     .main .function a {
       flex: 1;
       text-align: center;
@@ -66,7 +66,27 @@ html, body, .vue {
   .main .location {
     line-height: 0.48rem;
     font-size: 0.14rem;
-    color: #333; }
+    color: #333;
+    overflow: hidden;
+    padding: 0 0.16rem; }
+    .main .location img {
+      width: 0.16rem;
+      height: 0.16rem;
+      float: right;
+      margin-top: 0.16rem; }
+  .main .info {
+    background: #f5f5f5;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 0;
+    line-height: 0.42rem; }
+    .main .info div {
+      float: left;
+      width: 50%; }
+    .main .info div:nth-child(n) {
+      text-indent: 0.16rem; }
+    .main .info div:nth-child(2n) {
+      text-indent: 0; }
   .main .refresh {
     right: 0.16rem;
     top: -0.8rem;

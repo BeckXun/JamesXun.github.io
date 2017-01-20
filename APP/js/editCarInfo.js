@@ -40,6 +40,21 @@ var info = new Vue({
         this.placeholder = '请填写车架号';
         this.type = 'carNum';
       }
+    },
+    testInterface: function testInterface() {
+      // $.ajax({
+      //   type : 'POST',
+      // 	DataType : 'json',
+      // 	url : '//www.kantuzhe.com/pjwxjk/mian.aspx',
+      // 	timeout : common().timeout,
+      // 	data : {
+      //     password: '7935hjh',
+      //     sbh: '70001060'
+      //   },
+      //   success : function(data) {
+      //     console.log(data);
+      //   }
+      // });
     }
   }
 });
