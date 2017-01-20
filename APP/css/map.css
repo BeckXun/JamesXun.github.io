@@ -87,6 +87,10 @@ html, body, .vue {
       text-indent: 0.16rem; }
     .main .info div:nth-child(2n) {
       text-indent: 0; }
+    .main .info div:nth-child(1), .main .info div:nth-child(2) {
+      margin-top: 0.12rem; }
+    .main .info div:nth-child(5), .main .info div:nth-child(6) {
+      margin-bottom: 0.12rem; }
   .main .refresh {
     right: 0.16rem;
     top: -0.8rem;
@@ -100,3 +104,6 @@ html, body, .vue {
     color: #fff;
     font-size: 0.12rem;
     text-align: center; }
+
+.hide {
+  display: none; }

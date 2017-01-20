@@ -20,7 +20,7 @@ var app = new Vue({
     togger: function togger() {
       if (this.showFunction === true) {
         //height =》 1.26rem
-        $('.info').animate({ height: '1.26rem' });
+        $('.info').animate({ height: '1.5rem' });
       } else {
         //height =》 0
         $('.info').animate({ height: '0' });
