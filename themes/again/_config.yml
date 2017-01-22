@@ -1,0 +1,36 @@
+# basic
+title: JamesXun
+subtitle: You Are The JavaScript In My HTML
+favicon: favicon.ico
+
+# avatar: images/avatar.png
+# banner_small: images/banner-small.png
+# banner_large: images/banner-large.png
+avatar: http://ok690yakv.bkt.clouddn.com/headimg.jpeg
+banner_small:
+banner_large: http://ok690yakv.bkt.clouddn.com/img.jpeg
+
+# disqus
+disqus_shortname:
+
+# social
+social:
+  github: https://github.com/JamesXun
+  twitter:
+  weibo:
+
+# nav #
+nav:
+  home: .
+  archive: archives
+  # about: about
+  rss:
+
+# heox-renderre-sass
+node_sass:
+  outputStyle: nested
+  precision: 5
+  sourceComments: false
+
+
+google_anlytics: # Put tracking ID here
