@@ -69,5 +69,5 @@ theme: again
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:JamesXun/JamesXun.github.io.git
+  repo: https://github.com/JamesXun/JamesXun.github.io
   branch: master
