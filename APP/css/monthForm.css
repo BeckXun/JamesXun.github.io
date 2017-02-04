@@ -15,14 +15,14 @@ header {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    color: #50d288;
+    color: #09bb07;
     font-size: 0.14rem;
     line-height: 0.48rem;
     text-align: center;
     position: relative; }
   header .form-active::after, header .detail-active::after {
     content: '';
-    background-color: #50d288;
+    background-color: #09bb07;
     width: 0.28rem;
     height: 0.05rem;
     border-radius: 0.02rem;
@@ -56,8 +56,6 @@ header {
       .main-form .pieBox .date div {
         width: 0.4rem;
         height: 0.4rem;
-        border-radius: 100%;
-        border: 0.01rem solid #eee;
         background: url("../images/left.png") no-repeat center;
         background-size: 0.16rem; }
       .main-form .pieBox .date .fr {
@@ -113,7 +111,7 @@ header {
     .header div .unit {
       color: #999; }
   .header .date {
-    color: #07bc00; }
+    color: #09bb07; }
 
 .main {
   background: #fff; }
@@ -131,7 +129,7 @@ header {
       text-align: center;
       color: #343434; }
     .main .list .date {
-      color: #07bc00; }
+      color: #09bb07; }
 
 .bottom {
   border-top: 0.01rem solid #eee;
@@ -148,4 +146,4 @@ header {
     flex: 1;
     text-align: center; }
   .bottom .total {
-    color: #07bc00; }
+    color: #09bb07; }

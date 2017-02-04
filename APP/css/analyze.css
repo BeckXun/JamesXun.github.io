@@ -17,14 +17,14 @@ header {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    color: #50d288;
+    color: #09bb07;
     font-size: 0.14rem;
     line-height: 0.48rem;
     text-align: center;
     position: relative; }
   header .active::after {
     content: '';
-    background-color: #50d288;
+    background-color: #09bb07;
     width: 0.28rem;
     height: 0.05rem;
     border-radius: 0.02rem;
