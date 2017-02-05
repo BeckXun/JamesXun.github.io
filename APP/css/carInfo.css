@@ -49,7 +49,17 @@ header {
     color: #444444;
     line-height: 0.48rem; }
   .tagBar .active {
-    color: #23be69; }
+    color: #23be69;
+    position: relative; }
+  .tagBar .active::after {
+    content: '';
+    background-color: #09bb07;
+    width: 0.28rem;
+    height: 0.05rem;
+    border-radius: 0.02rem;
+    position: absolute;
+    left: 0.8rem;
+    bottom: 0; }
 
 #infoModule {
   background: transparent;

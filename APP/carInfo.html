@@ -25,8 +25,8 @@
     </header>
 
     <div class="tagBar">
-      <div class="baseInfo">基本信息</div>
-      <div class="carInfo">车辆信息</div>
+      <div :class="baseInfo ? 'baseInfo active' : 'baseInfo' " @click="tap('baseInfo')">基本信息</div>
+      <div :class="carInfo ? 'carInfo active' : 'carInfo' " @click="tap('carInfo')">车辆信息</div>
     </div>
 
     <div id="infoModule">
@@ -51,7 +51,7 @@
   </div>
 
 
-  <!-- <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script> -->
+  <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
   <script src="js/common.js"></script>
   <script src="js/carInfo.js"></script>
 </body>

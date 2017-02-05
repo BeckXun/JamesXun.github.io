@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header {
   background: #fff;
   height: 0.44rem;
@@ -12,24 +13,12 @@ header {
     line-height: 0.44rem;
     font-size: 0.12rem;
     color: #343434; }
-  header .prev-active {
-    background: url("../images/left-light.png") no-repeat left center;
-    background-size: 0.15rem;
-    padding-left: 0.15rem;
-    color: #343434;
-    float: left; }
   header .prev {
     background: url("../images/left.png") no-repeat left center;
     background-size: 0.15rem;
     padding-left: 0.15rem;
     color: #9b9b9b;
     float: left; }
-  header .next-active {
-    background: url("../images/right-light.png") no-repeat right center;
-    background-size: 0.15rem;
-    padding-right: 0.15rem;
-    color: #343434;
-    float: right; }
   header .next {
     background: url("../images/right.png") no-repeat right center;
     background-size: 0.15rem;
@@ -76,11 +65,29 @@ header {
     line-height: 0.22rem;
     font-size: 0.14rem;
     text-indent: 0.28rem;
-    background: url("../images/beginning.png") no-repeat left center;
-    background-size: 0.16rem; }
-  .detail .track .end {
-    background: url("../images/end.png") no-repeat left center;
-    background-size: 0.16rem; }
+    position: relative; }
+  .detail .track .beginning::before {
+    content: '起';
+    width: 0.16rem;
+    height: 0.16rem;
+    position: absolute;
+    left: 0.06rem;
+    top: 0;
+    color: #09bb07;
+    font-size: 0.14rem;
+    text-indent: 0;
+    display: block; }
+  .detail .track .end::before {
+    content: '终';
+    width: 0.16rem;
+    height: 0.16rem;
+    position: absolute;
+    left: 0.06rem;
+    top: 0;
+    color: #ff495a;
+    font-size: 0.14rem;
+    text-indent: 0;
+    display: block; }
   .detail .track .info {
     overflow: hidden;
     margin-top: 0.04rem;

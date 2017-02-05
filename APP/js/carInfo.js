@@ -5,6 +5,8 @@ var app = new Vue({
   data: {
     cancel: false, //取消分享
     myself: false, //是否为自己车--编辑车辆
+    baseInfo: true,
+    carInfo: false,
     info: [{
       default: true,
       detil: ['品牌：重汽', '购车日期：2016-01-01']
@@ -21,15 +23,64 @@ var app = new Vue({
       default: false,
       detil: ['驾驶评分：'],
       score: [1, 1, 1, 1, 0.5]
-    }]
+    }],
+    cacheInfo: {
+      base: [],
+      car: []
+    }
   },
   methods: {
     init: function init() {
-      var type = common().queryString('type');
-      if (type === 'cancel') {
-        this.cancel = true;
+      // let type = common().queryString('type');
+      // if(type === 'cancel'){
+      //   this.cancel = true;
+      // }else {
+      //   console.log(type);
+      // }
+      var that = this;
+      $.ajax({
+        type: 'POST',
+        DataType: 'json',
+        timeout: common().timeout,
+        url: 'http://182.92.243.77/pjwxjk/mian.aspx',
+        data: {
+          password: '7935hjh',
+          sbh: ''
+        },
+        success: function success(data) {
+          console.log(data);
+        }
+      });
+      var baseData = {
+        default: true,
+        detil: ['品牌：重汽', '购车日期：2016-01-01']
+      },
+          carData = {
+        default: true,
+        detil: ['设备号：7001080', '设备SIM卡号：7001080', '设备SIM卡余额：85.15元']
+      };
+      that.cacheInfo.base.push(baseData);
+      that.cacheInfo.car.push(carData);
+      console.log(that.cacheInfo);
+    },
+    tap: function tap(type) {
+      if (type === 'baseInfo') {
+
+        if (this.baseInfo === false) {
+          //上一次不是base
+          this.baseInfo = true;
+          this.info = this.cacheInfo.base;
+
+          this.carInfo = false;
+        }
       } else {
-        console.log(type);
+
+        if (this.carInfo === false) {
+          //上一次不是car
+          this.carInfo = true;
+          this.info = this.cacheInfo.car;
+          this.baseInfo = false;
+        }
       }
     }
   }

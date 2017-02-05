@@ -30,7 +30,7 @@ var app = new Vue({
             name: '怠速 5.81%',
             icon: 'roundRect',
             textStyle: {
-              color: '#95ccac'
+              color: '#999bcb'
             }
           }, {
             name: '空档滑行 13.62%',
