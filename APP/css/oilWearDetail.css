@@ -47,8 +47,6 @@ header {
       color: #343434; }
     .main .list .date {
       color: #07bc00; }
-    .main .list .averageSpeed {
-      font-weight: bold; }
 
 .bottom {
   border-top: 0.01rem solid #eee;
@@ -60,7 +58,5 @@ header {
     font-size: 0.12rem;
     flex: 1;
     text-align: center; }
-  .bottom .averageSpeed {
-    font-weight: bold; }
   .bottom .total {
     color: #07bc00; }

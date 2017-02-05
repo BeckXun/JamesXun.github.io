@@ -71,7 +71,7 @@ header {
     width: 0.16rem;
     height: 0.16rem;
     position: absolute;
-    left: 0.06rem;
+    left: 0;
     top: 0;
     color: #09bb07;
     font-size: 0.14rem;
@@ -82,7 +82,7 @@ header {
     width: 0.16rem;
     height: 0.16rem;
     position: absolute;
-    left: 0.06rem;
+    left: 0;
     top: 0;
     color: #ff495a;
     font-size: 0.14rem;
