@@ -16,9 +16,14 @@
 
   <div class="vue">
 
-    <div class="container" v-for="item in info">
+    <div class="container" v-for="(item, index) in info">
       <div class="header">
-        <img src="images/ABS.png">
+
+        <!-- 图标不一样 -->
+        <img src="images/ABS.png" v-if="index === 0">
+        <img src="images/fadongji.png" v-if="index === 1">
+        <img src="images/AMT.png" v-if="index === 2">
+
         <div class="type">{{item.type}}</div>
         <div class="timestamp">{{item.timestamp}}</div>
       </div>
