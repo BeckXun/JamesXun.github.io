@@ -18,47 +18,47 @@
   <div class="vue">
 
     <header>
-      <div :class="form ? 'form-active' : 'form'" @click="tap('form')">报表</div>
-      <div :class="detail ? 'detail-active' : 'detail'" @click="tap('detail')">详细信息</div>
+      <div :class="formState ? 'form-active' : 'form'" @click="tap('form')">报表</div>
+      <div :class="detailState ? 'detail-active' : 'detail'" @click="tap('detail')">详细信息</div>
     </header>
 
-    <div class="main-form" v-if="form">
+    <div class="main-form" v-if="formState">
       <div class="carNum">
-        <div class="plate">京A 343323</div>
-        <div class="num">894733432</div>
+        <div class="plate">{{cph}}</div>
+        <div class="num">{{sbh}}</div>
       </div>
       <div class="pieBox">
         <div class="date">
-          2016-11
-          <div class="fl"></div>
-          <div class="fr"></div>
+          {{Year}}-{{Month}}
+          <div class="fl" @click="changeMonth('prev')"></div>
+          <div class="fr" @click="changeMonth('next')"></div>
         </div>
-        <div class="pie"></div>
+        <div class="pie" v-if="formState"></div>
       </div>
       <div class="info">
         <div class="list">
-          <div class="time">总时间：98.00h</div>
-          <div class="km">总里程：3767</div>
+          <div class="time">{{form.time}}</div>
+          <div class="km">{{form.bdlc}}</div>
         </div>
         <div class="list">
-          <div class="time">总油耗：1422</div>
-          <div class="km">日均里程：376.37</div>
+          <div class="time">{{form.bdyh}}</div>
+          <div class="km">{{form.rjlc}}</div>
         </div>
         <div class="list">
-          <div class="time">平均车速：38.44</div>
-          <div class="km">途经：42个城市</div>
+          <div class="time">{{form.pjcs}}</div>
+          <div class="km">{{form.tjcs}}</div>
         </div>
         <div class="list">
-          <div class="time">高速：937.87Km</div>
-          <div class="km">国省：37.87Km</div>
+          <div class="time">{{form_gs}}</div>
+          <div class="km">{{form_other}}</div>
         </div>
-        <div class="list">
+        <!-- <div class="list">
           <div class="time">其他：343.Km</div>
-        </div>
+        </div> -->
       </div>
     </div>
 
-    <div class="main-detail"  v-if="detail">
+    <div class="main-detail"  v-if="detailState">
       <div class="header">
         <div class="date">日期</div>
         <div class="run">运行</div>
@@ -70,78 +70,34 @@
       </div>
 
       <div class="main">
-        <div class="list">
-          <div class="date">07-01</div>
-          <div class="run">13:18</div>
-          <div class="lazy">02:02</div>
-          <div class="empty">03:34</div>
-          <div class="have">01:37</div>
-          <div class="km">774.77</div>
-          <div class="oilWear">298.00</div>
+        <div class="list" v-for="item in detail">
+          <div class="date">{{item.rq}}</div>
+          <div class="run">{{item.yx}}</div>
+          <div class="lazy">{{item.ds}}</div>
+          <div class="empty">{{item.kd}}</div>
+          <div class="have">{{item.dd}}</div>
+          <div class="km">{{item.lc}}</div>
+          <div class="oilWear">{{item.yh}}</div>
         </div>
-        <div class="list">
-          <div class="date">07-01</div>
-          <div class="run">13:18</div>
-          <div class="lazy">02:02</div>
-          <div class="empty">03:34</div>
-          <div class="have">01:37</div>
-          <div class="km">774.77</div>
-          <div class="oilWear">298.00</div>
-        </div>
-        <div class="list">
-          <div class="date">07-01</div>
-          <div class="run">13:18</div>
-          <div class="lazy">02:02</div>
-          <div class="empty">03:34</div>
-          <div class="have">01:37</div>
-          <div class="km">774.77</div>
-          <div class="oilWear">298.00</div>
-        </div>
-        <div class="list">
-          <div class="date">07-01</div>
-          <div class="run">13:18</div>
-          <div class="lazy">02:02</div>
-          <div class="empty">03:34</div>
-          <div class="have">01:37</div>
-          <div class="km">774.77</div>
-          <div class="oilWear">298.00</div>
-        </div>
-        <div class="list">
-          <div class="date">07-01</div>
-          <div class="run">13:18</div>
-          <div class="lazy">02:02</div>
-          <div class="empty">03:34</div>
-          <div class="have">01:37</div>
-          <div class="km">774.77</div>
-          <div class="oilWear">298.00</div>
-        </div>
-        <div class="list">
-          <div class="date">07-01</div>
-          <div class="run">13:18</div>
-          <div class="lazy">02:02</div>
-          <div class="empty">03:34</div>
-          <div class="have">01:37</div>
-          <div class="km">774.77</div>
-          <div class="oilWear">298.00</div>
-        </div>
+
       </div>
 
       <div class="bottom">
         <div class="total">合计</div>
-        <div class="run">580</div>
-        <div class="lazy">577</div>
-        <div class="empty">0</div>
-        <div class="have">0</div>
-        <div class="km">36</div>
-        <div class="oilWear">298.00</div>
+        <div class="run">{{total_yx}}</div>
+        <div class="lazy">{{total_ds}}</div>
+        <div class="empty">{{total_kd}}</div>
+        <div class="have">{{total_dd}}</div>
+        <div class="km">{{total_lc}}</div>
+        <div class="oilWear">{{total_yh}}</div>
       </div>
     </div>
 
   </div>
 
 
-  <!-- <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script> -->
-  <!-- <script src="js/common.js"></script> -->
+  <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+  <script src="js/common.js"></script>
   <script src="js/monthForm.js"></script>
 </body>
 </html>

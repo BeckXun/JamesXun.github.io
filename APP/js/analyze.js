@@ -33,7 +33,8 @@ var app = new Vue({
         grid: {
           left: 50
         },
-        color: ['#9fe6f6'],
+        // color: ['rgb(65,146,246)'],
+        color: ['rgb(91,179,49)'],
         series: {
           name: '直接访问',
           type: 'bar',

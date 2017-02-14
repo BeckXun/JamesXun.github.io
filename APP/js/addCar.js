@@ -1,28 +1,54 @@
 'use strict';
 
-;(function (gold) {
-  var ROOT = 'http://' + window.location.host;
-  gold.SignIn = function () {
-    this.testPhone = /^1[3|4|5|7|8][0-9]\d{8}$/;
-    this.scanButton = $('.scanCode');
-  };
-  gold.SignIn.prototype = {
-    init: function init() {
-      this.scanCode();
+var app = new Vue({
+  el: '.vue',
+  data: {
+    cph: '',
+    sbh: '',
+    sjh: '',
+    pinpai: '',
+    state: false
+  },
+  methods: {
+    init: function init() {},
+    checkState: function checkState(content) {
+      if (content.length > 0) {
+        if (this.cph.length > 0 && this.sbh.length > 0 && this.sjh.length > 0 && this.pinpai.length > 0) {
+          this.state = true;
+        }
+      } else {
+        this.state = false;
+      }
     },
-    scanCode: function scanCode() {
-      this.scanButton.on('click', function () {
-        wx.scanQRCode({
-          needResult: 1, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
-          scanType: ["qrCode", "barCode"], // 可以指定扫二维码还是一维码，默认二者都有
-          success: function success(res) {
-            var result = res.resultStr; // 当needResult 为 1 时，扫码返回的结果
-            console.log(result);
-            console.log(res);
+    addCar: function addCar(state) {
+
+      if (state) {
+        var that = this;
+        $.ajax({ //分享车辆
+          type: 'POST',
+          DataType: 'json',
+          timeout: common().timeout,
+          url: common().ROOT() + '/pjwxjk/mian.aspx',
+          data: {
+            password: '7935hjh',
+            ffm: 'save_truck',
+            cph: that.cph,
+            sjh: that.sjh,
+            sbh: that.sbh,
+            pinpai: that.pinpai,
+            yhm: localStorage.userId
+          },
+          success: function success(data) {
+
+            var data = JSON.parse(data)[0];
+            console.log(data);
+            if (data.jg === "保存成功!") {
+              location.href = common().ROOT() + "/APP/myCar.html";
+            }
           }
         });
-      });
+      }
     }
-  };
-  new gold.SignIn().init();
-})(typeof window != 'undefined' ? window : undefined);
+  }
+});
+app.init();

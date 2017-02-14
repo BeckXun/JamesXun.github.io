@@ -14,12 +14,17 @@
 </head>
 <body>
 
-  <a class="diagnose" href="carDiagnose.html">整车诊断</a>
+  <div class="vue">
 
-  <div class="abs">
-    <a class="absData" href="absData.html">ABS运行数据</a>
-    <a class="absDiagnose" href="">ABS诊断（需要K线支持）</a>
+    <a class="diagnose" :href="'carDiagnose.html?index='+index">整车诊断</a>
+
+    <div class="abs">
+      <a class="absData" :href="'absData.html?index='+index">ABS运行数据</a>
+      <a class="absDiagnose" :href="'absDiagnose.html?index='+index">ABS诊断（需要K线支持）</a>
+    </div>
+
   </div>
+
 
   <script src="js/common.js"></script>
   <script src="js/diagnose.js"></script>

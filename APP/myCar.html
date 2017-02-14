@@ -12,77 +12,113 @@
   <script src="js/rem.js"></script>
   <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
   <script src="https://cdn.bootcss.com/vue/2.1.8/vue.min.js"></script>
+  <!-- <script src="http://a.tbcdn.cn/apps/baron/js/??lib/tmm/tmm.js,lib/lazyload/lazyload.js?20121015"></script> -->
 </head>
 <body>
 
 
   <div class="vue">
 
-    <div class="common-searchBox">
-      <input type="text" name="" placeholder="车牌号/车架号">
+    <div class="common-searchBox" >
+      <input type="text" name="" placeholder="车牌号/车架号" v-on:blur="search(key)" v-model="key">
     </div>
 
     <div class="main">
 
-      <div class="carInfoItem" v-for="item in info">
+      <div class="carInfoItem" v-for="(item,index) in info">
         <a href="map.html">
+          <!-- <img src="images/placeholder.png" :dataimg="item.carImg" class="carImg fl"> -->
           <img :src="item.carImg" class="carImg fl">
           <div class="info fr">
             <div class="top">
-              <div class="carName">{{item.carName}}({{item.carType}})</div>
-              <div class="carStatus">{{item.status}}</div>
+              <div class="carName">{{item.cph}}</div>
+              <div class="carStatus">{{item.zt}}</div>
             </div>
             <div class="middle">
-              <div class="carNum">{{item.carNum}}</div>
-              <div class="milestone">{{item.distance}}</div>
+              <div class="carNum">{{item.cjh}}</div>
+              <div class="milestone">{{item.lc}}</div>
             </div>
             <div class="bottom">
-              <div class="carProperty">{{item.ownership}}</div>
-              <div class="time">{{item.lastTime}}</div>
+              <div class="carProperty">{{item.type}}</div>
+              <div class="time">{{item.zhsj}}</div>
             </div>
           </div>
         </a>
 
-        <div class="function fl">
+        <!-- 主车DOM -->
+
+        <div class="function fl" v-if="item.type === '主车'">
           <div class="up">
-            <a href="track.html">
+            <a :href="'track.html?index='+index">
               <img src="images/myCar/01tu.png">
               <span>轨迹</span>
             </a>
-            <a href="monthForm.html">
+            <a :href="'monthForm.html?index='+index">
               <img src="images/myCar/02tu.png">
               <span>报表</span>
             </a>
-            <a href="oilWearDetail.html">
+            <a :href="'oilWearDetail.html?index='+index">
               <img src="images/myCar/03tu.png">
               <span>油耗</span>
             </a>
           </div>
           <div class="down">
-            <a :href="'diagnose.html?plate='+item.plate">
+            <a :href="'diagnose.html?index='+index">
               <img src="images/myCar/04tu.png">
               <span>诊断</span>
             </a>
-            <a href="analyze.html">
+            <a :href="'analyze.html?index='+index">
               <img src="images/myCar/05tu.png">
               <span>分析</span>
             </a>
-            <a href="carInfo.html">
+            <a :href="'carInfo.html?sbh='+item.sbh">
               <img src="images/myCar/06tu.png">
               <span>信息</span>
             </a>
           </div>
         </div>
-        <div class="share fr" @click="share">
+        <div class="share fr" @click="share"  v-if="item.type === '主车'">
           <img src="images/myCar/share.png">
           <span>分享</span>
         </div>
+
+        <!-- 挂车DOM -->
+
+        <div class="gua" v-if="item.type !== '主车'">
+          <div>
+            <a :href="'track.html?index='+index">
+              <img src="images/myCar/01tu.png">
+              <span>轨迹</span>
+            </a>
+          </div>
+          <div>
+            <a :href="'diagnose.html?index='+index">
+              <img src="images/myCar/04tu.png">
+              <span>诊断</span>
+            </a>
+          </div>
+          <div>
+            <a :href="'carInfo.html?sbh='+item.sbh">
+              <img src="images/myCar/06tu.png">
+              <span>信息</span>
+            </a>
+          </div>
+          <div class="guaShare" @click="share"  v-if="item.type !== '主车'">
+            <img src="images/myCar/share.png">
+            <span>分享</span>
+          </div>
+        </div>
+
       </div>
 
     </div>
 
+    <div class="type">
+      <div :class="lastType == 'main'  ? 'active' : ''" @click="tap('main')">主车</div>
+      <div :class="lastType == 'main'  ? '' : 'active'" @click="tap('gua')">挂车</div>
+    </div>
   </div>
-
+  <script src="js/common.js"></script>
   <script src="js/myCar.js"></script>
 </body>
 </html>

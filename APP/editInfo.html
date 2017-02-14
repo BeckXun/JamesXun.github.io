@@ -23,19 +23,19 @@
     </div>
 
     <div class="main">
-      <a class="name" href="editCarInfo.html?type=carName">
-        <div class="title">名称</div>
-        <div class="carName">{{carName}}</div>
+      <a class="name" :href="'editCarInfo.html?type=carName&sbh='+sbh">
+        <div class="title">车牌号</div>
+        <div class="carName">{{cph}}</div>
       </a>
-      <a class="carNum" href="editCarInfo.html?type=carNum">
+      <!-- <a class="carNum" :href="'editCarInfo.html?type=carNum&sbh='+sbh">
         <div class="title">车架号</div>
-        <div class="num">{{carNum}}</div>
-      </a>
+        <div class="num">{{cjh}}</div>
+      </a> -->
     </div>
   </div>
 
 
-
+  <script src="js/common.js"></script>
   <script src="js/editInfo.js"></script>
 </body>
 </html>

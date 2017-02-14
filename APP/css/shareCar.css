@@ -1,0 +1,54 @@
+.list {
+  height: 5.52rem;
+  overflow: scroll; }
+
+.shareCar {
+  padding-top: 0.16rem;
+  padding-bottom: 0.06rem;
+  overflow: hidden; }
+  .shareCar .selectBox {
+    width: 0.24rem;
+    height: 0.24rem;
+    margin-left: 0.16rem;
+    margin-top: 0.18rem;
+    margin-right: 0.17rem;
+    border-radius: 0.02rem;
+    background: #fff; }
+  .shareCar .selectBox-active {
+    width: 0.24rem;
+    height: 0.24rem;
+    margin-left: 0.16rem;
+    margin-top: 0.18rem;
+    margin-right: 0.17rem;
+    border-radius: 0.02rem;
+    background: #09bb07;
+    position: relative; }
+  .shareCar .selectBox-active::before {
+    content: "";
+    display: block;
+    width: 0.16rem;
+    height: 0.16rem;
+    background-image: url("../images/selected.png");
+    background-size: 0.16rem;
+    border-radius: 100%;
+    position: absolute;
+    left: 0.04rem;
+    top: 0.04rem; }
+  .shareCar img {
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 0.04rem;
+    margin-right: 0.17rem; }
+  .shareCar .info .carName {
+    padding-top: 0.11rem;
+    line-height: 0.18rem;
+    font-size: 0.14rem;
+    color: #444444; }
+  .shareCar .info .carNum {
+    padding-top: 0.04rem;
+    line-height: 0.16rem;
+    font-size: 0.12rem;
+    color: #aaaaaa; }
+
+.common-button {
+  margin-top: 0.14rem; }

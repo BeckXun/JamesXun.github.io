@@ -1,14 +1,14 @@
-// let title = new Vue({
-//   el: '#title',
-//   data: {
-//     title: ''
-//   },
-//   methods: {
-//     init: function(){
-//       let plate = common().queryString("plate");
-//       this.title = plate+' 诊断';
-//     }
-//   }
-// })
-// title.init();
-"use strict";
+'use strict';
+
+var app = new Vue({
+  el: '.vue',
+  data: {
+    index: ''
+  },
+  methods: {
+    init: function init() {
+      this.index = common().queryString("index");
+    }
+  }
+});
+app.init();

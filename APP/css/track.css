@@ -42,12 +42,12 @@ header {
 .detail {
   padding: 0 0.15rem;
   box-sizing: border-box;
-  background: #fff; }
+  background: #fff;
+  margin-bottom: 0.12rem; }
   .detail .header {
     line-height: 0.44rem;
     height: 0.44rem;
     border-bottom: 0.01rem solid #eee;
-    background: url("../images/right.png") no-repeat right center;
     background-size: 0.15rem; }
     .detail .header div {
       float: left; }

@@ -6,7 +6,9 @@
   <meta http-equiv="Cache-Control" content="no-cache" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-	<title>登录</title>
+	<title>注册</title>
+  <link rel="stylesheet" href="//cdn.bootcss.com/weui/1.1.0/style/weui.min.css">
+  <link rel="stylesheet" href="css/jquery-weui.min.css">
   <link rel="stylesheet" href="css/common.css" charset="utf-8">
   <link rel="stylesheet" href="css/login.css" charset="utf-8">
   <script src="js/rem.js"></script>
@@ -26,11 +28,11 @@
       <img src="images/login/02shouji.png" class="icon">
       <img src="images/login/03xian.png" class="line">
     </div>
-    <div :class="userNameState&&passwordState ? 'common-button':'common-button-forbidden'" @click="login()">登录</div>
-    <a href="singUp.html" class="signUp">立即注册</a>
+    <div :class="userNameState&&passwordState ? 'common-button':'common-button-forbidden'" @click="singUp()">注册</div>
   </div>
 
+  <script src="//cdn.bootcss.com/jquery-weui/1.0.0/js/jquery-weui.min.js"></script>
   <script src="js/common.js"></script>
-  <script src="js/login.js"></script>
+  <script src="js/singUp.js"></script>
 </body>
 </html>

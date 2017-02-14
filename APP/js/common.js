@@ -79,6 +79,29 @@ var common = function common() {
 		timeout: function timeout() {
 			return 3000;
 		},
+		ROOT: function ROOT() {
+			return 'http://www.kantuzhe.com';
+		},
+		carImgUrl: function carImgUrl(brand) {
+			var url = null;
+			switch (brand) {
+				case "欧曼":
+					url = "images/carImg/om.png";
+					break;
+				case "东风":
+					url = "images/carImg/df.png";
+					break;
+				case "重汽":
+					url = "images/carImg/zq.png";
+					break;
+				case "解放":
+					url = "images/carImg/jf.png";
+					break;
+				default:
+					url = "images/carImg/other.png";
+			};
+			return url;
+		},
 		getLocation: function getLocation(obj) {
 			console.log('开始调用getLocation', wx.getLocation);
 			var that = undefined;

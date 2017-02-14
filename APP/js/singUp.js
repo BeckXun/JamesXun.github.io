@@ -21,14 +21,40 @@ var app = new Vue({
   methods: {
     init: function init() {},
 
-    cacheUserInfo: function cacheUserInfo(userName) {
-      localStorage.userId = userName;
+    cacheUserInfo: function cacheUserInfo() {
+      localStorage.userId = this.userName;
     },
 
+    singUp: function singUp() {
+      var that = this;
+      if (this.userNameState && this.passwordState) {
+        $.ajax({
+          type: 'POST',
+          DataType: 'json',
+          timeout: common().timeout,
+          url: common().ROOT() + '/pjwxjk/mian.aspx',
+          data: {
+            password: '7935hjh',
+            ffm: 'user_in',
+            yhm: that.userName,
+            mm: that.password
+          },
+          success: function success(data) {
+            var data = JSON.parse(data)[0];
+            console.log(data);
+            if (data.jg === "注册成功") {
+              $.toast('注册成功');
+              that.cacheUserInfo();
+              that.login();
+            }
+          }
+        });
+      }
+    },
     login: function login() {
       var that = this;
       if (this.userNameState && this.passwordState) {
-        $.ajax({ //获取我的车辆
+        $.ajax({
           type: 'POST',
           DataType: 'json',
           timeout: common().timeout,
@@ -42,9 +68,7 @@ var app = new Vue({
           success: function success(data) {
             var data = JSON.parse(data)[0];
             console.log(data);
-
             if (data.jg === "OK") {
-              that.cacheUserInfo(data.xm);
               location.href = common().ROOT() + '/APP/myCar.html';
             }
           }

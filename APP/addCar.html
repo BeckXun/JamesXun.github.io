@@ -10,21 +10,24 @@
   <link rel="stylesheet" href="css/common.css" charset="utf-8">
   <link rel="stylesheet" href="css/addCar.css" charset="utf-8">
   <script src="js/rem.js"></script>
+  <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+  <script src="https://cdn.bootcss.com/vue/2.1.8/vue.min.js"></script>
 </head>
 <body>
 
-  <div class="common-button scanCode">扫码二维码</div>
+  <div class="vue">
 
-  <ul class="inputBox">
-    <li class="deviceNum"><input type="text" placeholder="输入设备号"></li>
-    <li class="phoneNum"><input type="text" placeholder="输入手机号"></li>
-    <li class="plate"><input type="text" placeholder="输入车牌号"></li>
-    <li class="brand"><input type="text" placeholder="输入品牌"></li>
-  </ul>
+    <ul class="inputBox">
+      <li class="deviceNum"><input type="text" placeholder="输入设备号" v-model="sbh" v-on:keyup="checkState(sbh)"></li>
+      <li class="phoneNum"><input type="text" placeholder="输入手机号" v-model="sjh" v-on:keyup="checkState(sjh)"></li>
+      <li class="plate"><input type="text" placeholder="输入车牌号" v-model="cph" v-on:keyup="checkState(cph)"></li>
+      <li class="brand"><input type="text" placeholder="输入品牌" v-model="pinpai" v-on:keyup="checkState(pinpai)"></li>
+    </ul>
 
-  <div class="common-button-forbidden confirmAdd">确认添加</div>
+    <div :class="state === true ? 'common-button confirmAdd' : 'common-button-forbidden confirmAdd'" @click="addCar(state)">确认添加</div>
 
-  <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+  </div>
+
   <script src="js/common.js"></script>
   <script src="js/addCar.js"></script>
 </body>

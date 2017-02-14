@@ -66,7 +66,7 @@ header {
   .main-form .info {
     background: #fff;
     margin-top: 0.08rem;
-    height: 2.42rem;
+    height: 1.98rem;
     position: relative;
     padding: 0 0.08rem; }
     .main-form .info .list {
@@ -85,7 +85,7 @@ header {
   .main-form .info:after {
     content: '';
     width: 0.01rem;
-    height: 2.15rem;
+    height: 1.73rem;
     background: #eee;
     position: absolute;
     left: 50%;
@@ -147,3 +147,6 @@ header {
     text-align: center; }
   .bottom .total {
     color: #09bb07; }
+
+.main-detail .main .list:last-child div:first-child {
+  display: none; }

@@ -18,21 +18,20 @@
 
   <div class="vue">
     <header>
-      <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1223246363,1066822246&fm=116&gp=0.jpg">
-      <div class="nickName">鸡儿邦硬</div>
+      <div class="nickName">{{userName}}</div>
     </header>
 
     <div class="main">
-      <a class="shareCar" href="share.html">分享车辆</a>
+      <a class="shareCar" href="shareCar.html">分享车辆</a>
       <a class="ManageShareCar" href="manageShare.html">管理分享车辆</a>
     </div>
     <a class="addCar" href="addCar.html">添加车辆</a>
 
-    <div class="common-button" @click="quit">退出登录</div>
+    <div class="common-button" @click="singOut">退出登录</div>
   </div>
 
 
-
+  <script src="js/common.js"></script>
   <script src="js/set.js"></script>
 </body>
 </html>

@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/common.css" charset="utf-8">
   <link rel="stylesheet" href="css/manageShare.css" charset="utf-8">
   <script src="js/rem.js"></script>
+  <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
   <script src="https://cdn.bootcss.com/vue/2.1.8/vue.min.js"></script>
 </head>
 <body>
@@ -17,15 +18,15 @@
   <div class="vue">
 
     <div class="common-searchBox">
-      <input type="text" name="" placeholder="车牌号/车架号">
+      <input type="text" name="" placeholder="车牌号/车架号" v-on:blur="search(key)" v-model="key">
     </div>
 
     <ul>
-      <li>
-        <a href="carInfo.html?type=cancel">
-          <div class="plate">蒙A 74437</div>
-          <div class="num">70001117</div>
-          <div class="shareCount">被分享50次</div>
+      <li v-for="item in list">
+        <a :href="'carInfo.html?type=cancel&sbh='+item.sbh+'&userid='+item.userid">
+          <div class="plate">{{item.cph}}</div>
+          <div class="num">{{item.cjh}}</div>
+          <!-- <div class="shareCount">被分享50次</div> -->
         </a>
       </li>
 

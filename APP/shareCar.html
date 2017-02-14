@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+	<title>分享车辆</title>
+  <link rel="stylesheet" href="css/common.css" charset="utf-8">
+  <link rel="stylesheet" href="css/shareCar.css" charset="utf-8">
+  <script src="js/rem.js"></script>
+  <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+  <script src="https://cdn.bootcss.com/vue/2.1.8/vue.min.js"></script>
+</head>
+<body>
+
+
+  <div class="vue">
+    <!-- <input type="text" placeholder="请输入手机号" class="common-input" @input="judgeStatus" v-model="inputMsg">
+
+    <div v-bind:class="buttonStatus ? 'common-button' : 'common-button-forbidden'" @click="submit">
+      下一步
+    </div> -->
+    <div class="list" >
+      <div class="shareCar" v-for="(item,index) in list">
+        <div :class="item.selectState ? 'selectBox-active fl' : 'selectBox fl' " @click="select(index)"></div>
+        <img :src="item.imgUrl" class="fl">
+        <div class="info">
+          <div class="carName">{{item.sbh}}</div>
+          <div class="carNum">{{item.cjh}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="common-button"  @click="submit()">分享</div>
+  </div>
+
+
+  <script src="js/common.js"></script>
+  <script src="js/shareCar.js"></script>
+</body>
+</html>

@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/common.css" charset="utf-8">
   <link rel="stylesheet" href="css/track.css" charset="utf-8">
   <script src="js/rem.js"></script>
+  <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
   <script src="https://cdn.bootcss.com/vue/2.1.8/vue.min.js"></script>
 </head>
 <body>
@@ -17,9 +18,10 @@
   <div class="vue">
 
     <header>
-      2016-01-23
-      <div class="prev">前一天</div>
-      <div class="next">后一天</div>
+
+      {{year}}-{{month}}-{{day}}
+      <div class="prev" @click="dateController('prev')">前一天</div>
+      <div class="next" @click="dateController('next')">后一天</div>
       <!-- prev-active 有数据 可以点击 -->
       <!-- prev 没数据 禁止点击 -->
     </header>
@@ -27,31 +29,30 @@
     <div class="total">
       <div class="km">
         <div class="title">总行驶：</div>
-        <div class="cont">23455km</div>
+        <div class="cont">{{totalKm}}</div>
       </div>
       <div class="oil">
         <div class="title">总油耗：</div>
-        <div class="cont">700L</div>
+        <div class="cont">{{totalOilWear}}</div>
       </div>
     </div>
 
-    <div class="detail">
+    <div class="detail" v-for="item in info">
       <div class="header">
-        <div class="time">17:44:02 - 17:50:03</div>
-        <div class="min">6分钟</div>
-        <div class="map">地图模式</div>
+        <div class="time">{{item.timeSlot}}</div>
+        <div class="min">{{item.timeDifference}}</div>
       </div>
       <div class="track">
-        <div class="beginning">山东省济南市历下区会站西路266号</div>
-        <div class="end">山东省济南市历下区会站西路288号</div>
+        <div class="beginning">{{item.startAdress}}</div>
+        <div class="end">{{item.endAdress}}</div>
         <div class="info">
           <div class="fl">
-            <div class="oil">油耗：108L</div>
-            <div class="average">平均：132.3L/100km</div>
+            <div class="oil">{{item.oilWear}}</div>
+            <div class="average">{{item.averageOilWear}}</div>
           </div>
           <div class="fr">
-            <div class="oil">里程：106km</div>
-            <div class="average">平均：75.0km/h</div>
+            <div class="oil">{{item.km}}</div>
+            <div class="average">{{item.averageSpeed}}</div>
           </div>
         </div>
       </div>

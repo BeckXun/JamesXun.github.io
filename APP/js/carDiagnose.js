@@ -3,25 +3,47 @@
 var app = new Vue({
   el: '.vue',
   data: {
-    info: [{
-      type: 'ABS故障',
-      img: 'images/shuju.png',
-      timestamp: '2016-02-12 18:00:30',
-      detail: [['SPN:791', 'FMI:5', '传感器二桥左－传感器开路或中断'], ['SPN:791', 'FMI:5', '传感器二桥左－传感器开路或中断']]
-    }, {
-      type: '发动机故障',
-      img: 'images/shuju.png',
-      timestamp: '2016-02-12 18:00:30',
-      detail: [['SPN:791', 'FMI:5', '传感器二桥左－传感器开路或中断']]
-    }, {
-      type: 'AMT故障',
-      img: 'images/shuju.png',
-      timestamp: '2016-02-12 18:00:30',
-      detail: [['SPN:791', 'FMI:5', '传感器二桥左－传感器开路或中断']]
-    }]
+    info: [],
+    sbh: ''
   },
   methods: {
-    init: function init() {}
+    init: function init() {
+      //sbh: 70001047
+      this.index = common().queryString("index");
+      var info = JSON.parse(localStorage.carInfo)[this.index];
+      this.sbh = 70001047; //测试用
+      // this.sbh = info.sbh;//上线用
+      var that = this;
+      $.ajax({
+        type: 'POST',
+        DataType: 'json',
+        timeout: common().timeout,
+        url: common().ROOT() + '/pjwxjk/mian.aspx',
+        data: {
+          password: '7935hjh',
+          ffm: 'get_main_zd',
+          sbh: that.sbh,
+          dqy: 0
+        },
+        success: function success(data) {
+          var data = JSON.parse(data);
+          console.log(data);
+          var arr = [];
+
+          data.forEach(function (item, index) {
+            var obj = {
+              type: item.lx,
+              // img: 'images/shuju.png',
+              timestamp: item.sj,
+              detail: [[item.ff, item.ss, item.ms]]
+            };
+            arr.push(obj);
+          });
+          that.info = arr;
+          arr = null;
+        }
+      });
+    }
 
   }
 });

@@ -24,15 +24,13 @@
   .box .button {
     background: #22be69 !important;
     font-size: 0.12rem; }
-  .box .button-forbidden {
-    position: absolute;
-    font-size: 0.12rem;
-    right: 0.07rem;
-    top: 0.07rem;
-    width: 0.9rem;
-    height: 0.3rem;
-    text-align: center;
-    line-height: 0.3rem;
-    background: #bbbbbb;
-    color: #fff;
-    border-radius: 0.04rem; }
+
+.signUp {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 0.16rem;
+  text-align: right;
+  line-height: 1.04rem;
+  color: #09bb07;
+  font-size: 0.16rem; }

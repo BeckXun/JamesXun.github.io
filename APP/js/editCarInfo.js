@@ -5,7 +5,7 @@ var info = new Vue({
   data: {
     inputMsg: '',
     buttonStatus: false,
-    placeholder: '请填写车辆名称',
+    placeholder: '请填写车牌号',
     type: 'carName'
   },
   methods: {
@@ -14,48 +14,34 @@ var info = new Vue({
       var value = e.target.value;
       if (value.length > 0) {
         this.buttonStatus = true;
-        //this.xxx = 'sdsd';即可设置data
       } else {
         this.buttonStatus = false;
       }
-
-      //this.$data.inputMsg 拿到data里面的数据
-      //this.inputMsg 拿到data里面的数据 (推荐)
-      console.log(this.inputMsg);
-
-      // `this` 在方法里指当前 Vue 实例
-      // `event` 是原生 DOM 事件
     },
     submit: function submit() {
       if (this.buttonStatus) {
-        console.log($.ajax);
-        if (this.type === 'carName') {} else if (this.type === 'carNum') {}
+
+        var that = this;
+        $.ajax({
+          type: 'POST',
+          DataType: 'json',
+          timeout: common().timeout,
+          url: common().ROOT() + '/pjwxjk/mian.aspx',
+          data: {
+            password: '7935hjh',
+            ffm: 'set_cph',
+            cph: that.inputMsg,
+            sbh: common().queryString('sbh')
+          },
+          success: function success(data) {
+
+            var data = JSON.parse(data)[0];
+            if (data.jg === 1) {
+              $.toast('修改成功');
+            }
+          }
+        });
       }
-    },
-    inputInit: function inputInit() {
-      var type = window.location;
-      //type default carName
-      //judge type carNum
-      if (type.search === "?type=carNum") {
-        this.placeholder = '请填写车架号';
-        this.type = 'carNum';
-      }
-    },
-    testInterface: function testInterface() {
-      // $.ajax({
-      //   type : 'POST',
-      // 	DataType : 'json',
-      // 	url : '//www.kantuzhe.com/pjwxjk/mian.aspx',
-      // 	timeout : common().timeout,
-      // 	data : {
-      //     password: '7935hjh',
-      //     sbh: '70001060'
-      //   },
-      //   success : function(data) {
-      //     console.log(data);
-      //   }
-      // });
     }
   }
 });
-info.inputInit();

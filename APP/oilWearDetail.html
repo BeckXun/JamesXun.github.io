@@ -17,9 +17,9 @@
   <div class="vue">
 
     <div class="month-date">
-      2016.12
-      <div class="prev fl"></div>
-      <div class="next fr"></div>
+      {{Year}}-{{Month}}
+      <div class="prev fl" @click="changeMonth('prev')"></div>
+      <div class="next fr" @click="changeMonth('next')"></div>
     </div>
 
     <header>
@@ -47,71 +47,23 @@
     </header>
 
     <div class="main">
-      <div class="list">
-        <div class="date">08-25</div>
-        <div class="km">22.11</div>
-        <div class="gpsKm">22.29</div>
-        <div class="oilWear">0.00</div>
-        <div class="averageOilWear">0.00</div>
-        <div class="averageSpeed">12.91</div>
-      </div>
-      <div class="list">
-        <div class="date">08-25</div>
-        <div class="km">22.11</div>
-        <div class="gpsKm">22.29</div>
-        <div class="oilWear">0.00</div>
-        <div class="averageOilWear">0.00</div>
-        <div class="averageSpeed">12.91</div>
-      </div>
-      <div class="list">
-        <div class="date">08-25</div>
-        <div class="km">22.11</div>
-        <div class="gpsKm">22.29</div>
-        <div class="oilWear">0.00</div>
-        <div class="averageOilWear">0.00</div>
-        <div class="averageSpeed">12.91</div>
-      </div>
-      <div class="list">
-        <div class="date">08-25</div>
-        <div class="km">22.11</div>
-        <div class="gpsKm">22.29</div>
-        <div class="oilWear">0.00</div>
-        <div class="averageOilWear">0.00</div>
-        <div class="averageSpeed">12.91</div>
-      </div>
-      <div class="list">
-        <div class="date">08-25</div>
-        <div class="km">22.11</div>
-        <div class="gpsKm">22.29</div>
-        <div class="oilWear">0.00</div>
-        <div class="averageOilWear">0.00</div>
-        <div class="averageSpeed">12.91</div>
-      </div>
-      <div class="list">
-        <div class="date">08-25</div>
-        <div class="km">22.11</div>
-        <div class="gpsKm">22.29</div>
-        <div class="oilWear">0.00</div>
-        <div class="averageOilWear">0.00</div>
-        <div class="averageSpeed">12.91</div>
-      </div>
-      <div class="list">
-        <div class="date">08-25</div>
-        <div class="km">22.11</div>
-        <div class="gpsKm">22.29</div>
-        <div class="oilWear">0.00</div>
-        <div class="averageOilWear">0.00</div>
-        <div class="averageSpeed">12.91</div>
+      <div class="list" v-for="item in detail">
+        <div class="date">{{item.sj}}</div>
+        <div class="km">{{item.lc}}</div>
+        <div class="gpsKm">{{item.gps}}</div>
+        <div class="oilWear">{{item.yh}}</div>
+        <div class="averageOilWear">{{item.pjyh}}</div>
+        <div class="averageSpeed">{{item.pjcs}}</div>
       </div>
     </div>
 
     <div class="bottom">
       <div class="total">合计</div>
-      <div class="km">580</div>
-      <div class="gpsKm">577</div>
-      <div class="oilWear">0</div>
-      <div class="averageOilWear">0</div>
-      <div class="averageSpeed">36</div>
+      <div class="km">{{total.lc}}</div>
+      <div class="gpsKm">{{total.gps}}</div>
+      <div class="oilWear">{{total.yh}}</div>
+      <div class="averageOilWear">{{total.pjyh}}</div>
+      <div class="averageSpeed">{{total.pjcs}}</div>
     </div>
 
   </div>

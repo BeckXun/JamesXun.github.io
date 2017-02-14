@@ -1,17 +1,16 @@
-@charset "UTF-8";
 /*main module*/
 .main {
-  /*function module*/
-  /* <div class="share fr">*/
-  /*   <img src="images/myCar/share.png">*/
-  /*   <span>分享</span>*/
-  /* </div>*/ }
+  height: 5.14rem;
+  overflow: scroll;
+  /*function module*/ }
   .main .carInfoItem {
     margin-bottom: 0.1rem;
     background: #fff;
     padding: 0.15rem;
     padding-bottom: 0;
     overflow: hidden; }
+    .main .carInfoItem a {
+      overflow: hidden; }
     .main .carInfoItem .carImg {
       width: 0.75rem;
       height: 0.75rem;
@@ -39,9 +38,22 @@
         font-size: 0.12rem;
         line-height: 0.18rem;
         color: #bbb; }
+  .main .gua {
+    height: 0.6rem;
+    width: 100%;
+    display: flex; }
+    .main .gua div {
+      flex: 1;
+      box-sizing: border-box;
+      padding-top: 0.2rem; }
+      .main .gua div img {
+        width: 0.15rem;
+        height: 0.15rem;
+        vertical-align: middle;
+        margin-left: 0.24rem; }
   .main .function {
     height: 0.72rem;
-    width: 2.98rem; }
+    width: 2.96rem; }
     .main .function div:nth-child(n) {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -65,7 +77,7 @@
     .main .function .up {
       padding-top: 0.06rem; }
   .main .share {
-    width: 0.46rem;
+    width: 0.48rem;
     height: 0.3rem;
     padding-top: 0.26rem;
     font-size: 0; }
@@ -79,3 +91,24 @@
       vertical-align: middle;
       font-size: 0.13rem;
       margin-left: 0.04rem; }
+
+.type {
+  width: 100%;
+  height: 0.48rem;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0; }
+  .type div {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: center;
+    color: #999;
+    font-size: 0.16rem;
+    line-height: 0.48rem; }
+  .type .active {
+    color: #09bb07; }

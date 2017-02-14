@@ -21,8 +21,8 @@ var app = new Vue({
   methods: {
     init: function init() {},
 
-    cacheUserInfo: function cacheUserInfo(userName) {
-      localStorage.userId = userName;
+    cacheUserInfo: function cacheUserInfo() {
+      // localStorage.userid = ;
     },
 
     login: function login() {
@@ -40,13 +40,8 @@ var app = new Vue({
             mm: that.password
           },
           success: function success(data) {
-            var data = JSON.parse(data)[0];
+            var data = JSON.parse(data);
             console.log(data);
-
-            if (data.jg === "OK") {
-              that.cacheUserInfo(data.xm);
-              location.href = common().ROOT() + '/APP/myCar.html';
-            }
           }
         });
       }

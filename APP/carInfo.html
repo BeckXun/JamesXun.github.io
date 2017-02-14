@@ -7,21 +7,25 @@
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
 	<title>车辆信息</title>
+  <link rel="stylesheet" href="//cdn.bootcss.com/weui/1.1.0/style/weui.min.css">
+  <link rel="stylesheet" href="css/jquery-weui.min.css">
   <link rel="stylesheet" href="css/common.css" charset="utf-8">
   <link rel="stylesheet" href="css/carInfo.css" charset="utf-8">
   <script src="js/rem.js"></script>
+  <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
   <script src="https://cdn.bootcss.com/vue/2.1.8/vue.min.js"></script>
 </head>
 <body>
 
   <div class="vue">
     <header>
-      <img src="http://img5.imgtn.bdimg.com/it/u=3503642437,650188888&fm=21&gp=0.jpg">
+      <img :src="header.imgUrl">
       <div class="info">
-        <div class="carName">小车一号</div>
-        <div class="carNum">车架号：FL20302</div>
+        <div class="carName">{{cph}}</div>
+        <div class="carNum">{{header.carNum}}</div>
       </div>
-      <a class="edit" href="editInfo.html" v-if="myself">编辑</a>
+      <a class="edit" :href="'editCarInfo.html?pinpai='+pinpai+'&cph='+cph
+      +'&cjh='+cjh+'&sbh='+sbh" v-if="myself">编辑</a>
     </header>
 
     <div class="tagBar">
@@ -45,14 +49,15 @@
         </div>
       </ul>
 
-      <div class="common-button" v-if="cancel">取消分享</div>
+      <div class="common-button" v-if="cancel" @click="cancelShare()">取消分享</div>
 
     </div>
   </div>
 
 
-  <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+
   <script src="js/common.js"></script>
+  <script src="//cdn.bootcss.com/jquery-weui/1.0.0/js/jquery-weui.min.js"></script>
   <script src="js/carInfo.js"></script>
 </body>
 </html>

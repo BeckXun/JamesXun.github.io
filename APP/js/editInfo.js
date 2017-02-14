@@ -3,13 +3,18 @@
 var app = new Vue({
   el: '.vue',
   data: {
-    carImg: 'http://img3.imgtn.bdimg.com/it/u=2368545682,2930337165&fm=23&gp=0.jpg',
-    carName: '兰博基尼',
-    carNum: 'NB88888'
+    carImg: '',
+    cph: '兰博基尼',
+    cjh: 'NB88888',
+    sbh: ''
   },
   methods: {
     init: function init() {
-      console.log('vue init');
+      var pinpai = common().queryString('pinpai');
+      this.carImg = common().carImgUrl(pinpai);
+      this.cph = common().queryString('cph');
+      this.cjh = common().queryString('cjh');
+      this.sbh = common().queryString('sbh');
     }
   }
 });
