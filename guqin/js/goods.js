@@ -21,7 +21,8 @@ var app = new Vue({
 
     pay: function pay() {
       var that = this;
-      location.href = '/login.html';
+      // location.href = '/login.html'; //development
+      location.href = '/guqin/login.html'; //production
     }
 
   }
