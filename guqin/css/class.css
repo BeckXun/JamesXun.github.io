@@ -1,7 +1,9 @@
 .main {
   height: 5.74rem;
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch; }
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  padding-bottom: 0.5rem; }
   .main .box {
     margin-top: 0.1rem;
     background: #fff;
