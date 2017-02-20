@@ -9,7 +9,8 @@ div {
 
 .main {
   height: 5.8rem;
-  overflow-y: auto; }
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; }
 
 .title {
   line-height: 0.54rem;

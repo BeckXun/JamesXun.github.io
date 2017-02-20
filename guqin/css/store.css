@@ -3,7 +3,8 @@ img {
 
 .main {
   height: 5.74rem;
-  overflow-y: auto; }
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; }
   .main img {
     height: 2rem; }
   .main .content {
