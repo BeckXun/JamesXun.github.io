@@ -1,0 +1,127 @@
+@charset "UTF-8";
+img {
+  display: block; }
+
+.main {
+  padding-bottom: 0.5rem;
+  box-sizing: border-box; }
+
+.classHeader {
+  overflow: hidden; }
+  .classHeader img {
+    height: 2rem; }
+  .classHeader div {
+    text-align: center; }
+  .classHeader .title {
+    background: #fff;
+    padding-top: 0.05rem;
+    line-height: 0.46rem;
+    font-size: 0.16rem;
+    color: #db8747; }
+  .classHeader .address {
+    background: #fff;
+    font-size: 0.13rem;
+    color: #999;
+    padding-bottom: 0.2rem; }
+  .classHeader .classTabbar {
+    background: #fff;
+    border-top: 0.01rem solid #ddd;
+    height: 0.44rem;
+    display: flex; }
+    .classHeader .classTabbar div {
+      flex: 1;
+      text-align: center;
+      line-height: 0.44rem;
+      font-size: 0.16rem; }
+    .classHeader .classTabbar .active {
+      color: #db8747;
+      position: relative; }
+    .classHeader .classTabbar .active::after {
+      content: "";
+      position: absolute;
+      width: 0.44rem;
+      height: 0.01rem;
+      color: #db8747;
+      bottom: 0;
+      left: 0.7rem; }
+
+.title {
+  line-height: 0.54rem;
+  height: 0.54rem;
+  font-size: 0.16rem;
+  text-align: center;
+  position: relative; }
+  .title .line {
+    width: 3.55rem;
+    height: 0.01rem;
+    background: #ddd;
+    position: absolute;
+    top: 49%;
+    left: 0.1rem;
+    /* z-index: 0;*/ }
+  .title .cont {
+    width: 0.96rem;
+    line-height: 0.54rem;
+    height: 0.54rem;
+    position: absolute;
+    top: 0;
+    left: 1.4rem;
+    background: #f3f3f3;
+    z-index: 1; }
+  .title .cont::before {
+    content: "";
+    width: 0.04rem;
+    height: 0.04rem;
+    border-radius: 0.04rem;
+    position: absolute;
+    left: 0.06rem;
+    top: 47%;
+    background: #ddd; }
+  .title .cont::after {
+    content: "";
+    width: 0.04rem;
+    height: 0.04rem;
+    border-radius: 0.04rem;
+    position: absolute;
+    right: 0.06rem;
+    top: 45%;
+    background: #ddd; }
+
+.cont {
+  display: block;
+  height: 2rem;
+  position: relative; }
+  .cont img {
+    height: 100%; }
+  .cont div {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    width: 100%; }
+  .cont .type {
+    font-family: "宋体";
+    font-size: 0.16rem;
+    top: 0.72rem; }
+  .cont .price {
+    font-size: 0.16rem;
+    top: 1.03rem; }
+
+.cont-mt {
+  display: block;
+  height: 2rem;
+  position: relative;
+  margin-top: 0.1rem; }
+  .cont-mt img {
+    height: 100%; }
+  .cont-mt div {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    width: 100%; }
+  .cont-mt .type {
+    font-family: "宋体";
+    font-size: 0.16rem;
+    top: 0.72rem; }
+  .cont-mt .price {
+    font-size: 0.16rem;
+    top: 1.03rem; }

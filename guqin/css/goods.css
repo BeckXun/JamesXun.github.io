@@ -1,0 +1,51 @@
+img {
+  display: block; }
+
+.goodsHeader {
+  background: #fff; }
+  .goodsHeader img {
+    height: 2.5rem; }
+  .goodsHeader .box {
+    height: 1.17rem;
+    background: #fff;
+    text-align: center; }
+    .goodsHeader .box .goodsName {
+      padding-top: 0.1rem;
+      line-height: 0.27rem;
+      font-size: 0.17rem;
+      color: #333; }
+    .goodsHeader .box .count {
+      line-height: 0.22rem;
+      font-size: 0.12rem;
+      color: #666; }
+    .goodsHeader .box .price {
+      line-height: 0.26rem;
+      font-size: 0.16rem;
+      color: #b4282d; }
+    .goodsHeader .box .tagBox {
+      padding-top: 0.1rem;
+      width: 2.76rem;
+      margin: 0 auto;
+      font-size: 0; }
+      .goodsHeader .box .tagBox .tag {
+        margin: 0 0.15rem;
+        width: 0.6rem;
+        border-radius: 0.02rem;
+        border: 0.01rem solid #bd8747;
+        color: #bd8747;
+        display: inline-block;
+        text-align: center;
+        font-size: 0.11rem;
+        line-height: 0.15rem; }
+
+.main {
+  margin-top: 0.1rem; }
+  .main img {
+    width: 100%; }
+
+.online-pay {
+  text-align: center;
+  font-size: 0.14rem;
+  line-height: 0.44rem;
+  background: #bd8747;
+  color: #fff; }

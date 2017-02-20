@@ -1,0 +1,70 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  overflow-y: hidden; }
+
+div {
+  color: #333; }
+
+.logo {
+  height: 2.4rem;
+  box-sizing: border-box;
+  padding-top: 0.6rem; }
+  .logo img {
+    width: 50%;
+    display: block;
+    margin: 0 auto; }
+
+.box {
+  margin-bottom: 0.3rem; }
+  .box .success {
+    font-size: 0.16rem;
+    text-align: center;
+    line-height: 0.36rem; }
+  .box .desc {
+    font-size: 0.14rem;
+    text-align: center;
+    line-height: 0.48rem;
+    color: #999; }
+
+.submit {
+  width: 3.43rem;
+  line-height: 0.48rem;
+  border-radius: 0.04rem;
+  background: #1f94fb;
+  margin: 0.4rem auto 0;
+  text-align: center;
+  font-size: 0.16rem;
+  color: #fff; }
+
+.submit-forbidden {
+  width: 3.43rem;
+  line-height: 0.48rem;
+  border-radius: 0.04rem;
+  background: #999;
+  margin: 0.4rem auto 0;
+  text-align: center;
+  font-size: 0.16rem;
+  color: #fff; }
+
+.submitDesc {
+  line-height: 0.48rem;
+  font-size: 0.12rem;
+  color: #999;
+  text-indent: 0.16rem; }
+
+.description {
+  background: #f7f7f7;
+  padding-top: 0.22rem;
+  padding-bottom: 0.46rem; }
+  .description .title {
+    background: url("../images/warnning.png") 0.16rem center no-repeat;
+    background-size: 0.14rem;
+    text-indent: 0.32rem;
+    margin-bottom: 0.12rem;
+    line-height: 0.14rem; }
+  .description .cont {
+    line-height: 0.34rem;
+    color: #999;
+    text-indent: 0.16rem; }
